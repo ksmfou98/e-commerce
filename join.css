@@ -1,0 +1,269 @@
+body {
+    
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#header {
+    background-color:#f2ddc4;
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+    font-size:55px;
+    width: 1384.5px;
+    height:155.98px;
+
+}
+
+
+#main{
+    border-bottom: 1px solid #f7f7f7;
+}
+
+#content{
+    min-width: 1050px;
+    padding-bottom: 170px;
+}
+
+.page_aticle{
+    width: 1050px;
+    margin: 0 auto;
+}
+
+#content .form{
+    width: 640px;
+    margin: 0 auto;
+}
+
+#content .form .tit{
+    padding-top: 64px;
+    font-weight: 900;
+    font-size: 30px;
+    color: #333;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -.5px;
+    
+}
+#content .form .sub{
+    padding: 23px 0 10px;
+    font-size: 12px;
+    color: #666;
+    line-height: 17px;
+    text-align: right;
+    border-bottom: 2px solid black;
+    margin-bottom:0;
+}
+
+#ico{
+    padding-right: 2px;
+    color: #ee6a7b;
+}
+
+#main .col-sm-6 input::placeholder{
+    color: rgba(110, 107, 107,0.4)
+}
+
+#font_size{
+    font-size:14px;
+    position: relative;
+}
+
+#fst{
+    width: 159px;
+    padding: 20px 0 0 20px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    vertical-align: top;
+    text-align: left;
+}
+
+#sst{
+    display:flex;
+    padding: 10px 0;
+    border-top: 0;
+    font-size: 14px;
+    vertical-align: top;
+    text-align: left;
+}
+
+#jungbok{
+    position: absolute;
+    color: #5f0080;
+    left: 504px;
+    width: 120px;
+    height: 44px;
+    font-size:14px
+}
+
+#juso{
+    position: absolute;
+    color: #5f0080;
+    left: 159px;
+    width: 332px;
+    height: 44px;
+    font-size: 14px;
+    top: 8px;
+}
+
+
+
+
+.btn:focus {  /*버튼 효과 없애기 */
+    outline: none;
+    box-shadow: none;
+  }
+
+  #adressNo{
+    display: inline-block;
+    height: 100%;
+    margin-left: -14px;
+    padding-left: 24px;
+    color: #5f0080;
+    line-height: 30px;
+    background: url(https://res.kurly.com/pc/service/common/2006/ico_search.svg) no-repeat 0 50%;
+    background-size: 25px 24px;
+    vertical-align: top; 
+  }
+
+  #content .form form .txt_guide{
+    position:relative;
+  }
+
+  #content .form form .txt_guide > span{
+    position:absolute;
+    top: 22px;
+    left: 159px;
+    font-size:12px;
+    color: #666;
+    
+  }
+
+ 
+   .icon {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 100%;
+    vertical-align: -7px;
+    top: 12px;
+    left: 146px;
+  }
+
+
+  .new-row input[type=radio]{
+    position: absolute;
+    z-index: -1;
+   
+  }
+
+  #content .form .inu_button{
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 100%;
+    vertical-align: -7px;
+  }
+
+  #jump{
+    display: inline-block;
+    padding: 10px 52px 10px 0;
+    vertical-align: top;
+  }
+
+  #sex{
+      position:relative;
+      
+  }
+
+
+  .new-row{
+    position: absolute;
+    top: 2px;
+    left: 159px;
+  }
+
+  .marginvalue{
+      margin-right:40px;
+  }
+
+  .birth_day{
+    overflow: hidden;
+    width: 332px;
+    padding-left: 18px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  
+
+  .birth_day input[type=text]{
+    float: left;
+    width: 84px;
+    height: 40px;
+    border: 0;
+    text-align: center;
+  }
+
+  .bar{
+      float:left;
+  }
+
+  .bar::after{
+    content: "/";
+    float: left;
+    width: 22px;
+    height: 100%;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  .boder_btom{
+      border-bottom: 2px solid black;
+  }
+
+  .btom_line{
+      height:64px;
+      margin-bottom:19px;
+  }
+
+  .form_footer{
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .btn_join{
+    width: 240px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 41px;
+  }
+
+  #formSubmit .active{
+    border: 1px solid #5f0081;
+    background-color: #5f0080;
+    color: #fff;
+  }
+
+  #footer{
+    width: 1050px;
+    height:419px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    font-weight: 400;
+    letter-spacing: -.2px;
+    background-color: #f2ddc4;
+    color: black;
+    text-align:center;
+  }
