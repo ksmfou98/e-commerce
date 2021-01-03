@@ -267,3 +267,24 @@ body {            /* 웹페이지 전체 폰트 설정 */
     color: black;
     text-align:center;
   }
+
+
+
+  .txt_guide::before{
+    display: none;
+    padding: 10px 0 9px;
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    word-break: break-all;
+    letter-spacing: -.1px;
+    clear: both;
+    display:block;
+    
+  }
+
+  .txt_guide::after{
+    display:block;
+  }
+
+ 
