@@ -1,11 +1,11 @@
-body {            /* 웹페이지 전체 폰트 설정 */
+/* body {             웹페이지 전체 폰트 설정 
     
-    font-family: 'Noto Sans KR', sans-serif;   /* 구글 폰트임 */
-}
+    font-family: 'Noto Sans KR', sans-serif;    구글 폰트임 
+} */
 
 
 
-#header {       /* 이부분은 common.css 받으면 삭제예정 */
+/* #header {       이부분은 common.css 받으면 삭제예정 
     background-color:#f2ddc4;
     color: black;
     text-align: center;
@@ -14,12 +14,12 @@ body {            /* 웹페이지 전체 폰트 설정 */
     width: 1384.5px;
     height:155.98px;
 
-}
+} */
 
 
-#main{      /*main과 footer의 경계선을 주기 위해 main 아래 부분에다가 선 만들어놈 */
+/* #main{      main과 footer의 경계선을 주기 위해 main 아래 부분에다가 선 만들어놈 
     border-bottom: 1px solid #f7f7f7;
-}
+} */
 
 #content{     /*main 부분에서 내용이 들어갈 세로 크기 지정*/
     min-width: 1050px;
@@ -230,7 +230,7 @@ body {            /* 웹페이지 전체 폰트 설정 */
     background-color: #5f0080;
     color: #fff;
   }
-
+/* 
   #footer{
     width: 1050px;
     height:419px;
@@ -241,7 +241,7 @@ body {            /* 웹페이지 전체 폰트 설정 */
     background-color: #f2ddc4;
     color: black;
     text-align:center;
-  }
+  } */
 
 
 
