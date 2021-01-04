@@ -1,7 +1,9 @@
 body {            /* 웹페이지 전체 폰트 설정 */
     
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;   /* 구글 폰트임 */
 }
+
+
 
 #header {       /* 이부분은 common.css 받으면 삭제예정 */
     background-color:#f2ddc4;
@@ -15,23 +17,23 @@ body {            /* 웹페이지 전체 폰트 설정 */
 }
 
 
-#main{      /*footer 윗부분 선 */
+#main{      /*main과 footer의 경계선을 주기 위해 main 아래 부분에다가 선 만들어놈 */
     border-bottom: 1px solid #f7f7f7;
 }
 
-#content{     /*메인부분의 전체*/
+#content{     /*main 부분에서 내용이 들어갈 세로 크기 지정*/
     min-width: 1050px;
     padding-bottom: 170px;
 }
 
-.main_page_aticle{     /* 메인부분의 내용이 있는곳 */
+.main_page_aticle{     /* main 부분에서 내용이 들어갈 부분 가로크기지정후 가운데 정렬 */
     width: 1050px;
-    margin: 0 auto;
+    margin: 0 auto;    /*가운데 정렬 */
 }
 
-#content .form{               /*가운데 정렬 */
+#content .form{               /*회원 가입 폼 가운데 정렬 */
     width: 640px;
-    margin: 0 auto;
+    margin: 0 auto;       
 }
 
 #content .form .main_title{      /*회원가입 적혀있는 부분 */
@@ -44,7 +46,7 @@ body {            /* 웹페이지 전체 폰트 설정 */
     letter-spacing: -.5px;
     
 }
-#content .form .sub{                 /*필수 입력 사항*/
+#content .form .sub{                 /*필수 입력 사항 적혀있는 부분*/
     padding: 23px 0 10px;
     font-size: 12px;
     color: #666;
@@ -63,12 +65,12 @@ body {            /* 웹페이지 전체 폰트 설정 */
     color: rgba(110, 107, 107,0.4)
 }
 
-#font_size{
+#font_size{        /*font 크기를 14로 할때 이거 사용*/
     font-size:14px;
     position: relative;
 }
 
-#fst{
+#fst{    /*회원 가입 폼에서 왼쪽 부분 ex)아이디, 비밀번호 , 비밀번호확인 등등.. */
     width: 159px;
     padding: 20px 0 0 20px;
     font-weight: 500;
@@ -79,7 +81,7 @@ body {            /* 웹페이지 전체 폰트 설정 */
     text-align: left;
 }
 
-#sst{
+#sst{  /*회원 가입 폼에서 오른쪽 부분 ex)input 기능, 중복확인 기능 등등.. */
     display:flex;
     padding: 10px 0;
     border-top: 0;
@@ -88,7 +90,7 @@ body {            /* 웹페이지 전체 폰트 설정 */
     text-align: left;
 }
 
-#jungbok{
+#idjungbok{ /* 아이디 중복 확인 */
     position: absolute;
     color: #5f0080;
     left: 504px;
@@ -97,7 +99,16 @@ body {            /* 웹페이지 전체 폰트 설정 */
     font-size:14px
 }
 
-#juso{
+#emailjungbok{ /* 이메일 중복 확인 */
+  position: absolute;
+  color: #5f0080;
+  left: 504px;
+  width: 120px;
+  height: 44px;
+  font-size:14px
+}
+
+#juso{  /*주소 검색 */
     position: absolute;
     color: #5f0080;
     left: 159px;
@@ -127,11 +138,22 @@ body {            /* 웹페이지 전체 폰트 설정 */
     vertical-align: top; 
   }
 
-  #content .form form .txt_guide{  /*배송지에 따라 상품 정보가 달라질수 있습니다 */
+  
+
+
+
+
+
+
+
+
+  
+
+  #content .form form .standard{  /*배송지에 따라 상품 정보가 달라질수 있습니다 */
     position:relative;
   }
 
-  #content .form form .txt_guide > span{   /*배송지에 따라 상품 정보가 달라질수 있습니다 */
+  #content .form form .standard > span{   /*배송지에 따라 상품 정보가 달라질수 있습니다 */
     position:absolute;
     top: 22px;
     left: 159px;
@@ -139,62 +161,15 @@ body {            /* 웹페이지 전체 폰트 설정 */
     color: #666;
     
   }
+  
 
- 
-   /* .icon {
-    display: inline-block;
-    position: relative;
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 100%;
-    vertical-align: -7px;
-    top: 12px;
-    left: 146px;
-  }
- */
-
-  /* .new-row input[type=radio]{
-    position: absolute;
-    z-index: -1;
-   
-  }
-
-  #content .form .inu_button{
-    display: inline-block;
-    position: relative;
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 100%;
-    vertical-align: -7px;
-  }
-
-  #jump{
-    display: inline-block;
-    padding: 10px 52px 10px 0;
-    vertical-align: top;
-  }
-
-  #sex{         성별
-      position:relative;
-      
-  } */
-
-
-  .new-row{
+  /* .new-row{  생년월일 col-sm-6 옆에 있던건데 내가 왜 만들었었지?? 
     position: absolute;
     top: 2px;
     left: 159px;
-  }
-
-  /* .marginvalue{
-      margin-right:40px;
   } */
+
+ 
 
   .birth_day{
     overflow: hidden;
@@ -270,21 +245,43 @@ body {            /* 웹페이지 전체 폰트 설정 */
 
 
 
-  .txt_guide::before{
-    display: none;
-    padding: 10px 0 9px;
-    font-size: 12px;
+  
+
+  .txt_guide{
+    position:relative;
+  }
+
+  .idbell1 .txt_case1{  /*6자 이상의 영문 혹은 영문과 숫자를 조합 */
+    display:none;
+    top:51px;
+    left:-329px;
+}
+  
+
+  .idbell1 .txt_case2{  /* 아이디 중복확인 */
+    display:none;
+    top:74px;
+    left:-329px;
+  }
+
+  #content .idbell1.on{
+    height: 129px;
+  }
+
+  #content .idbell2.on, .idbell3.on{
+    display:block;
+    position:absolute;
+    font-size:12px;
     color: #666;
-    line-height: 18px;
-    word-break: break-all;
-    letter-spacing: -.1px;
-    clear: both;
-    display:block;
-    
   }
 
-  .txt_guide::after{
-    display:block;
+
+  #content .form .txt_guide span::before{      /* 앞에 점 붙이는거 */
+    content: '\2022';
+    display: inline-block;
+    padding: 0 4px 0 2px;
+    font-size: 12px;
+    vertical-align: 0;
   }
 
- 
+
