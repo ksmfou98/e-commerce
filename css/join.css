@@ -327,6 +327,45 @@
     color: #666;
   }
 
+  #main #content .main_page_aticle .form .juso_search.on{  /* juso_search 뒤에 .on 붙여야댐 */
+    padding-bottom:0 !important;
+    height:200px;
+  }
+
+  #juso.on{
+    display:none;
+  }
+
+  #user_address{
+    display:none;
+  }
+
+  #user_detail_address{
+    display:none;
+  }
+
+
+
+
+  #user_address.on{
+    display:block;
+    border: 1px solid #ced4da;
+    width: 332px;
+    position: absolute;
+    height: 44px;
+    top: 8px;
+    left: 159px;
+  }
+
+  #user_detail_address.on{
+    display:block;
+    width: 332px;
+    border: 1px solid #ced4da;
+    position: absolute;
+    height: 44px;
+    top: 64px;
+    left: 159px;
+  }
 
 
 
