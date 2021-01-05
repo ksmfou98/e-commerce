@@ -217,13 +217,14 @@ window.addEventListener('DOMContentLoaded',function(){
         
       });
 
-    const idjungbok = document.querySelector('#idjungbok');
-    idjungbok.addEventListener('click', id_overlap_check); 
-
+    
 
 
 
       //아이디 중복체크
+    const idjungbok = document.querySelector('#idjungbok');
+    idjungbok.addEventListener('click', id_overlap_check); 
+
       function id_overlap_check() {
 
         $('.inpt_id').change(function () {
