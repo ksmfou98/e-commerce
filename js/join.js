@@ -147,6 +147,58 @@ window.addEventListener('DOMContentLoaded',function(){
         pw_bell_u.classList.add('on');
       });
       text2.blur(function(){
+        function pw_check(){
+            var pw = $(".inpt_pw").val();
+
+            var num = /[0-9]/;
+            var eng = /[a-zA-Z]/;
+            var spe = /[~!@#$%^&*()_+|<>?:{}]/;
+        
+
+
+            if(pw.length < 10){
+                $(".pw_bell_s").css('color', '#b3130b');
+                $(".pw_bell_s").text("10자 이상 입력해주세요.");
+                return false;
+            }
+
+            if(pw.length >= 10){
+                $(".pw_bell_s").css('color', '#0f851a');
+                $(".pw_bell_s").text("성공!");
+                
+            }
+
+            if(num.test(pw) == 0 || eng.test(pw) == 0 || spe.test(pw) == 0){
+                $(".pw_bell_t").css('color', '#b3130b');
+                $(".pw_bell_t").text("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+                return false;
+            }
+
+            if(num.test(pw) == 1 && eng.test(pw) == 1 && spe.test(pw) == 1){
+                $(".pw_bell_t").css('color', '#0f851a');
+                $(".pw_bell_t").text("성공!");
+                
+            }
+            if(/(\w)\1\1/.test(pw)){
+                $(".pw_bell_u").css('color', '#b3130b');
+                $(".pw_bell_u").text("동일한 숫자 3개 이상 연속 사용 불가");
+                return false;
+            }
+            if(!/(\w)\1\1/.test(pw)){
+                $(".pw_bell_u").css('color', '#0f851a');
+                $(".pw_bell_u").text("성공!");
+                
+            }
+
+            return true;
+            }
+
+
+        pw_check();
+        
+       
+        
+        
         
       });
 
@@ -159,6 +211,8 @@ window.addEventListener('DOMContentLoaded',function(){
       text3.blur(function(){
         
       });
+
+      
     
 
 

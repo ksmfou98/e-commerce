@@ -36,7 +36,7 @@
                         </p>
 
 
-                        <form action="form-action.php" method="get">
+                        <form action="join_complete.html" method="get" onsubmit="return pw_check()">
                             <div class="row mb-3" id="font_size">
                               <label for="loginId" class="col-sm-2 col-form-label" id="fst" style="padding-top:29px; ">아이디<span id=ico>*</span></label>
                               <div class="col-sm-6 id_bell_f" id="sst" style="padding-top: 19px;">
@@ -57,7 +57,7 @@
                                 <input type="password" name="비밀번호" class="form-control inpt_pw check_pw"  placeholder="비밀번호를 입력해주세요">
                                 <p class="txt_guide">
                                   <span class="pw_txt_case1 pw_bell_s ">10자 이상 입력</span>
-                                  <span class="pw_txt_case2 pw_bell_t ">영문/숫자/특수문자/(공백 제외)만 허용하며,2개 이상 조합</span>
+                                  <span class="pw_txt_case2 pw_bell_t ">영문/숫자/특수문자 (- 제외) 조합해주세요</span>
                                   <span class="pw_txt_case3 pw_bell_u ">동일한 숫자 3개 이상 연속 사용 불가</span>
                                 </p>
                               </div>
