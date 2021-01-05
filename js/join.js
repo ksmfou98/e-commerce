@@ -212,6 +212,48 @@ window.addEventListener('DOMContentLoaded',function(){
         
       });
 
+
+
+      //아이디 중복체크
+      function id_overlap_check() {
+
+        $('.inpt_id').change(function () {
+            $(".id_bell_t").css('color', '#b3130b');
+            
+            // $('.inpt_id').attr("check_result", "fail");
+        })
+    
+    
+        if ($('.username_input').val() == '') {
+          alert('아이디를 입력해주세요');
+          return;
+        }
+    
+        id_overlap_input = document.querySelector('input[name="id"]');
+    
+        $.ajax({
+          url: "{% url 'lawyerAccount:id_overlap_check' %}",    //해당 url로 데이터를 넘김
+          data: {
+            'username': id_overlap_input.value
+          },
+          datatype: 'json',
+          success: function (data) {
+            console.log(data['overlap']);
+            if (data['overlap'] == "fail") {
+              alert("이미 존재하는 아이디 입니다.");
+              id_overlap_input.focus();
+              return;
+            } else {
+              alert("사용가능한 아이디 입니다.");
+              $(".id_bell_t").css('color', '#0f851a');
+              return;
+            }
+          }
+        });
+      }
+
+      id_overlap_check();
+
       
     
 
