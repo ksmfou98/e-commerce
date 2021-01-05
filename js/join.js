@@ -5,17 +5,16 @@ window.addEventListener('DOMContentLoaded',function(){
     const id_bell_f = document.querySelector('.id_bell_f');
     const id_bell_s = document.querySelector('.id_bell_s');
     const id_bell_t = document.querySelector('.id_bell_t');
-    const inpt_id = document.querySelector('.inpt_id');
+    
 
     const pw_bell_f = document.querySelector('.pw_bell_f');
     const pw_bell_s = document.querySelector('.pw_bell_s');
     const pw_bell_t = document.querySelector('.pw_bell_t');
     const pw_bell_u = document.querySelector('.pw_bell_u');
-    const inpt_pw = document.querySelector('.inpt_pw');
+    
 
     const pw2_bell_f = document.querySelector('.pw2_bell_f');
     const pw2_bell_s = document.querySelector('.pw2_bell_s');
-    const inpt_pw2 = document.querySelector('.inpt_pw2');
 
 
     const juso = document.querySelector('#juso');
@@ -23,25 +22,8 @@ window.addEventListener('DOMContentLoaded',function(){
     const user_detail_address = document.querySelector('#user_detail_address');
     const juso_search = document.querySelector('.juso_search');
 
-    const txt_guide = document.querySelector('.txt_guide');
 
-    function notification1(){
-        id_bell_f.classList.add('on');
-        id_bell_s.classList.add('on');
-        id_bell_t.classList.add('on');
-    }
-
-    function notification2(){
-        pw_bell_f.classList.add('on');
-        pw_bell_s.classList.add('on');
-        pw_bell_t.classList.add('on');
-        pw_bell_u.classList.add('on');
-    }
-
-    function notification3(){
-        pw2_bell_f.classList.add('on');
-        pw2_bell_s.classList.add('on');
-    }
+    juso.addEventListener('click', jusosearch);
 
     function jusosearch(){
         new daum.Postcode({
@@ -115,20 +97,6 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
 
-                
-
-    inpt_id.addEventListener('click',notification1);
-
-    inpt_pw.addEventListener('click',notification2);
-
-    inpt_pw2.addEventListener('click',notification3);
-
-
-    juso.addEventListener('click', jusosearch);
-
-
-
-
 
 
     // 비밀번호 일치 불일치
@@ -143,19 +111,54 @@ window.addEventListener('DOMContentLoaded',function(){
             if (pwd1 == pwd2) {
                 $(".pw2_bell_s").css('color', '#0f851a');
                 $(".pw2_bell_s").text("비밀번호가 동일합니다.");
-                
-
-                
+            
                 
             } else {
-                alert("비밀번호가 일치하지 않습니다. 비밀번호를 재확인해주세요.");
                 $(".pw2_bell_s").css('color', '#b3130b');
+                $(".pw2_bell_s").text("비밀번호가 일치하지 않습니다..");
                 
                 
             }
         }
     });
-    
+
+
+    //아이디 조건 만족 불만족
+
+    var text1 = $('.inpt_id');
+    text1.focus(function(){
+        id_bell_f.classList.add('on');
+        id_bell_s.classList.add('on');
+        id_bell_t.classList.add('on');
+      });
+      text1.blur(function(){
+        
+      });
+
+
+
+
+    //비밀번호 조건 만족 불만족
+    var text2 = $('.inpt_pw');
+    text2.focus(function(){
+        pw_bell_f.classList.add('on');
+        pw_bell_s.classList.add('on');
+        pw_bell_t.classList.add('on');
+        pw_bell_u.classList.add('on');
+      });
+      text2.blur(function(){
+        
+      });
+
+    //비밀번호 확인 조건 만족 불만족
+    var text3 = $('.inpt_pw2');
+    text3.focus(function(){
+        pw2_bell_f.classList.add('on');
+        pw2_bell_s.classList.add('on');
+      });
+      text3.blur(function(){
+        
+      });
     
 
 
