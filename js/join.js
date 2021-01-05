@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
     juso.addEventListener('click', jusosearch);
-
+    
     function jusosearch(){
         new daum.Postcode({
             oncomplete: function(data) {
@@ -123,6 +123,11 @@ window.addEventListener('DOMContentLoaded',function(){
     });
 
 
+    
+
+
+
+
     //아이디 조건 만족 불만족
 
     var text1 = $('.inpt_id');
@@ -212,6 +217,10 @@ window.addEventListener('DOMContentLoaded',function(){
         
       });
 
+    const idjungbok = document.querySelector('#idjungbok');
+    idjungbok.addEventListener('click', id_overlap_check); 
+
+
 
 
       //아이디 중복체크
@@ -224,17 +233,19 @@ window.addEventListener('DOMContentLoaded',function(){
         })
     
     
-        if ($('.username_input').val() == '') {
+        if ($('.inpt_id').val() == '') {
           alert('아이디를 입력해주세요');
+          $(".id_bell_t").css('color', '#b3130b');
           return;
         }
     
-        id_overlap_input = document.querySelector('input[name="id"]');
+        id_overlap_input = document.querySelector('.inpt_id');
     
         $.ajax({
+          type: 'POST',
           url: "{% url 'lawyerAccount:id_overlap_check' %}",    //해당 url로 데이터를 넘김
           data: {
-            'username': id_overlap_input.value
+            'id': $('.inpt_id').val()
           },
           datatype: 'json',
           success: function (data) {
@@ -252,7 +263,6 @@ window.addEventListener('DOMContentLoaded',function(){
         });
       }
 
-      id_overlap_check();
 
       
     
