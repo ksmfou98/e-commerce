@@ -23,6 +23,8 @@ window.addEventListener('DOMContentLoaded',function(){
     const user_detail_address = document.querySelector('#user_detail_address');
     const juso_search = document.querySelector('.juso_search');
 
+    const txt_guide = document.querySelector('.txt_guide');
+
     function notification1(){
         id_bell_f.classList.add('on');
         id_bell_s.classList.add('on');
@@ -110,6 +112,9 @@ window.addEventListener('DOMContentLoaded',function(){
             }
         }).open();
     }
+
+
+
                 
 
     inpt_id.addEventListener('click',notification1);
@@ -120,6 +125,36 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
     juso.addEventListener('click', jusosearch);
+
+
+
+
+
+
+    // 비밀번호 일치 불일치
+
+    $('.check_pw').focusout(function () {
+        var pwd1 = $(".inpt_pw").val();
+        var pwd2 = $(".inpt_pw2").val();
+ 
+        if ( pwd1 != '' && pwd2 == '' ) {
+            null;
+        } else if (pwd1 != "" || pwd2 != "") {
+            if (pwd1 == pwd2) {
+                $(".pw2_bell_s").css('color', '#0f851a');
+                $(".pw2_bell_s").text("비밀번호가 동일합니다.");
+                
+
+                
+                
+            } else {
+                alert("비밀번호가 일치하지 않습니다. 비밀번호를 재확인해주세요.");
+                $(".pw2_bell_s").css('color', '#b3130b');
+                
+                
+            }
+        }
+    });
     
     
 
