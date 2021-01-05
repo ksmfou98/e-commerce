@@ -89,6 +89,7 @@ window.addEventListener('DOMContentLoaded',function(){
                 user_address.classList.add('on');
                 juso_search.classList.add('on');
                 user_detail_address.classList.add('on');
+                juso.classList.add('on');
 
 
 
