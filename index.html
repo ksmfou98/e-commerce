@@ -13,102 +13,102 @@
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script>
-        // onsubmit 관련된 코드짜기
-          function on_id_check(){
+        // onsubmit 관련된 코드짜기      js파일에 하니깐 html에서 불러오질 못함....;;;;;;;;;;;;;;;;;;;;에바임
+
+          function on_id_check(){          //id 검사 함수
             var id = $("#submit_check_id").val();
             var spe = /[~!@#$%^&*()_+|<>?:{}]/;
             if(id.length < 6){
-              $("#submit_check_id").css('border', '1px solid red');
               alert('아이디를 정확히 입력해주세요');
               return false;
             }else if(spe.test(id) == 1){
-              $("#submit_check_id").css('border', '1px solid red');
+
               alert('아이디를 정확히 입력해주세요');
               return false;
             }
             else{
-              $("#submit_check_id").css('border', '1px solid #ced4da');
+              
               return true;
             }
           }
 
-          function on_pw_check(){
+          function on_pw_check(){           //비밀번호 검사 함수
             var pw = $("#submit_check_pw").val();
             var num = /[0-9]/;
             var eng = /[a-zA-Z]/;
             var spe = /[~!@#$%^&*()_+|<>?:{}]/;
             if(pw.length < 10){
-              $("#submit_check_pw").css('border', '1px solid red');
+             
               alert('비밀번호를 정확히 입력해주세요');
               return false;
             }else if(num.test(pw) == 0 || eng.test(pw) == 0 || spe.test(pw) == 0){
-              $("#submit_check_pw").css('border', '1px solid red');
+              
               alert('비밀번호를 정확히 입력해주세요');
             }
             else{
-              $("#submit_check_pw").css('border', '1px solid #ced4da');
+              
               return true;
             }
           }
 
-          function on_pw2_check(){
+          function on_pw2_check(){           //비밀번호 확인 검사 함수
             var pw = $("#submit_check_pw").val();
             var pw2 = $("#submit_check_pw2").val();
             if(pw2.length == 0){
-              $("#submit_check_pw2").css('border', '1px solid red');
+              
               alert('비밀번호 확인을 다시해주세요');
               return false;
             }else if(pw != pw2){
-              $("#submit_check_pw2").css('border', '1px solid red');
+              
               alert('비밀번호 확인을 다시해주세요');
             }
             else{
-              $("#submit_check_pw2").css('border', '1px solid #ced4da');
+              
               return true;
             }
           }
 
-          function on_name_check(){
+          function on_name_check(){             //이름 검사 함수
             var name = $("#submit_check_name").val();
             if(name.length == 0){
-              $("#submit_check_name").css('border', '1px solid red');
+              
               alert('이름을 입력해주세요');
               return false;
             }else{
-              $("#submit_check_name").css('border', '1px solid #ced4da');
+              
               return true;
             }
           }
 
-          function on_email_check(){
+          function on_email_check(){             //이메일 검사 함수
             var email = $("#submit_check_email").val();
             if(email.length == 0){
-              $("#submit_check_email").css('border', '1px solid red');
+              
               alert('이메일을 정확히 입력해주세요');
               return false;
             }else{
-              $("#submit_check_email").css('border', '1px solid #ced4da');
+              
               return true;
             }
           }
 
-          function on_phone_check(){
+          function on_phone_check(){               //휴대폰번호 검사함수  나중에 여기다가 휴대폰 인증 못받으면 못넘어가게 추가시킬꺼임
             var phone = $("#submit_check_phone").val();
             if(phone.length == 0){
-              $("#submit_check_phone").css('border', '1px solid red');
+              
               alert('휴대폰 번호를 입력해주세요');
               return false;
             }else{
-              $("#submit_check_phone").css('border', '1px solid #ced4da');
+              
               return true;
             }
           }
 
 
 
-          function on_submit_check(){
+          function on_submit_check(){               // fomr에 onsubmit으로 최종적으로 넘겨야될 함수
             
-            var check = false;
+            var check = false;                   //check변수에 false를 넣어주고 다른 함수들이 false를 반환하면 다음페이지로 못넘어가게 설정
             if(on_id_check() == check){
               return false;
             }else if(on_pw_check() == check){
