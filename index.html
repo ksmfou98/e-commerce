@@ -44,6 +44,7 @@
             }else if(num.test(pw) == 0 || eng.test(pw) == 0 || spe.test(pw) == 0){
               
               alert('비밀번호를 정확히 입력해주세요');
+              return false;
             }
             else{
               
@@ -61,6 +62,7 @@
             }else if(pw != pw2){
               
               alert('비밀번호 확인을 다시해주세요');
+              return false;
             }
             else{
               
@@ -173,7 +175,7 @@
                             <div class="row mb-3" id="font_size">
                               <label for="userpw" class="col-sm-2 col-form-label" id="fst">비밀번호<span id=ico>*</span></label>
                               <div class="col-sm-6 pw_bell_f" id="sst">
-                                <input type="password" name="비밀번호" class="form-control inpt_pw check_pw"  id="submit_check_pw"  placeholder="비밀번호를 입력해주세요">
+                                <input type="password" name="pw" class="form-control inpt_pw check_pw"  id="submit_check_pw"  placeholder="비밀번호를 입력해주세요">
                                 <p class="txt_guide">
                                   <span class="pw_txt_case1 pw_bell_s ">10자 이상 입력</span>
                                   <span class="pw_txt_case2 pw_bell_t ">영문/숫자/특수문자 (- 제외) 조합해주세요</span>
@@ -198,7 +200,7 @@
                               <div class="row mb-3" id="font_size">
                                 <label for="name" class="col-sm-2 col-form-label" id="fst">이름<span id=ico>*</span></label>
                                 <div class="col-sm-6" id="sst">
-                                  <input type="text" name="이름" class="form-control"  id="submit_check_name" placeholder="이름을 입력해주세요">
+                                  <input type="text" name="name" class="form-control"  id="submit_check_name" placeholder="이름을 입력해주세요">
                                 </div>
                               </div>
 
@@ -206,7 +208,7 @@
                               <div class="row mb-3" id="font_size">
                                 <label for="useremail" class="col-sm-2 col-form-label" id="fst">이메일<span id=ico>*</span></label>
                                 <div class="col-sm-6" id="sst">
-                                  <input type="email" name="이메일" class="form-control"  id="submit_check_email" placeholder="예:ksmfou98@inu.ac.kr">
+                                  <input type="email" name="email" class="form-control inpt_email"  id="submit_check_email" placeholder="예:ksmfou98@inu.ac.kr">
                                   <button type="button" id="emailjungbok"class="btn btn-outline-primary">중복확인</button>
                                 </div>
                               </div>
@@ -215,7 +217,7 @@
                               <div class="row mb-3" id="font_size">
                                 <label for="phonenumber" class="col-sm-2 col-form-label" id="fst">휴대폰<span id=ico>*</span></label>
                                 <div class="col-sm-6" id="sst">
-                                  <input type="text" name="휴대폰번호" class="form-control"  id="submit_check_phone" placeholder="숫자만 입력해주세요">
+                                  <input type="text" name="phonenumber" class="form-control"  id="submit_check_phone" placeholder="숫자만 입력해주세요">
                                 </div>
                               </div>
 
@@ -234,11 +236,11 @@
                                 <label for="phonenumber" class="col-sm-2 col-form-label" id="fst">생년월일</label>
                                 <div class="col-sm-6 " id="sst">
                                   <div class="birth_day">
-                                    <input type="text" name="년도" id="birth_year" pattern="[0-9]*" value="" label="생년월일" size="4" maxlength="4" placeholder="YYYY">
+                                    <input type="text" name="year" id="birth_year" pattern="[0-9]*" value="" label="생년월일" size="4" maxlength="4" placeholder="YYYY">
                                     <span class="bar"></span>
-                                    <input type="text" name="월" id="birth_month" pattern="[0-9]*" value="" label="생년월일" size="2" maxlength="2" placeholder="MM">
+                                    <input type="text" name="month" id="birth_month" pattern="[0-9]*" value="" label="생년월일" size="2" maxlength="2" placeholder="MM">
                                     <span class="bar"></span>
-                                    <input type="text" name="일" id="birth_day" pattern="[0-9]*" value="" label="생년월일" size="2" maxlength="2" placeholder="DD">
+                                    <input type="text" name="day" id="birth_day" pattern="[0-9]*" value="" label="생년월일" size="2" maxlength="2" placeholder="DD">
                                   </div>
                                 
                                 </div>

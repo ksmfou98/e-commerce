@@ -270,17 +270,16 @@ window.addEventListener('DOMContentLoaded',function(){
     
         if ($('.inpt_id').val() == '') {
           alert('아이디를 입력해주세요');
-          $(".id_bell_t").css('color', '#b3130b');
           return;
         }
     
-        id_overlap_input = document.querySelector('.inpt_id');
+        id_overlap_input = document.querySelector('input[name="id"]');
     
         $.ajax({
-          type: 'POST',
-          url: "{% url 'lawyerAccount:id_overlap_check' %}",    //해당 url로 데이터를 넘김
+          type: "GET",
+          url: "./id_check?id="+id_overlap_input,    //해당 url로 데이터를 넘김
           data: {
-            'id': $('.inpt_id').val()
+            'username': $('.inpt_id').val()
           },
           datatype: 'json',
           success: function (data) {
@@ -301,11 +300,44 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
 
-
-
-
     //이메일 중복체크
+    const emailjungbok = document.querySelector('emailjungbok');
+    emailjungbok.addEventListener('click', email_overlap_check);
 
+    function email_overlap_check() {
+
+        // $('.inpt_email').change(function () {
+            
+        // })
+    
+    
+        if ($('.inpt_email').val() == '') {
+          alert('이메일을 입력해주세요');
+          return;
+        }
+    
+        email_overlap_input = document.querySelector('input[name="email"]');
+    
+        $.ajax({
+          type: "GET",
+          url: "./id_check?id="+email_overlap_input,    //해당 url로 데이터를 넘김
+          data: {
+            'username': $('.inpt_email').val()
+          },
+          datatype: 'json',
+          success: function (data) {
+            console.log(data['overlap']);
+            if (data['overlap'] == "fail") {
+              alert("이미 존재하는 이메일 입니다.");
+              email_overlap_input.focus();
+              return;
+            } else {
+              alert("사용가능한 이메일 입니다.");
+              return;
+            }
+          }
+        });
+    }
     
 
 
