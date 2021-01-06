@@ -301,7 +301,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
     //이메일 중복체크
-    const emailjungbok = document.querySelector('emailjungbok');
+    const emailjungbok = document.querySelector('#emailjungbok');
     emailjungbok.addEventListener('click', email_overlap_check);
 
     function email_overlap_check() {
@@ -320,9 +320,9 @@ window.addEventListener('DOMContentLoaded',function(){
     
         $.ajax({
           type: "GET",
-          url: "./id_check?id="+email_overlap_input,    //해당 url로 데이터를 넘김
+          url: "./email_check?id="+email_overlap_input,    //해당 url로 데이터를 넘김
           data: {
-            'username': $('.inpt_email').val()
+            'email': $('.inpt_email').val()
           },
           datatype: 'json',
           success: function (data) {
