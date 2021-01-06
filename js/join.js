@@ -22,6 +22,11 @@ window.addEventListener('DOMContentLoaded',function(){
     const user_detail_address = document.querySelector('#user_detail_address');
     const juso_search = document.querySelector('.juso_search');
 
+    
+
+     
+
+
 
     juso.addEventListener('click', jusosearch);
     
@@ -120,6 +125,8 @@ window.addEventListener('DOMContentLoaded',function(){
                 
             }
         }
+
+        
     });
 
 
@@ -128,8 +135,36 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
 
-    //아이디 조건 만족 불만족
+    //아이디 조건 만족 불만족 함수 생성
+    function id_check(){
+        var id = $(".inpt_id").val();
 
+        // var num = /[0-9]/;
+        // var eng = /[a-zA-Z]/;
+        var spe = /[~!@#$%^&*()_+|<>?:{}]/;
+    
+
+
+        if(id.length < 6){
+            $(".id_bell_s").css('color', '#b3130b');
+            // $(".id_bell_s").text("6자 이상의 영문 혹은 영문과 숫자를 조합");
+            return false;
+        }else if(spe.test(id) == 1){
+            $(".id_bell_s").css('color', '#b3130b');
+            // $(".id_bell_s").text("6자 이상의 영문 혹은 영문과 숫자를 조합");
+            return false;
+
+        }else{
+
+            $(".id_bell_s").css('color', '#0f851a');
+            return true;
+        }
+        
+
+        
+        }
+
+    //아이디 조건 만족 불만족
     var text1 = $('.inpt_id');
     text1.focus(function(){
         id_bell_f.classList.add('on');
@@ -137,6 +172,8 @@ window.addEventListener('DOMContentLoaded',function(){
         id_bell_t.classList.add('on');
       });
       text1.blur(function(){
+        
+        id_check();
         
       });
 
@@ -149,7 +186,7 @@ window.addEventListener('DOMContentLoaded',function(){
         pw_bell_f.classList.add('on');
         pw_bell_s.classList.add('on');
         pw_bell_t.classList.add('on');
-        pw_bell_u.classList.add('on');
+        // pw_bell_u.classList.add('on');  동일한 숫자 3개 이상 연속 사용불가 제외시켜버렸음
       });
       text2.blur(function(){
         function pw_check(){
@@ -163,37 +200,37 @@ window.addEventListener('DOMContentLoaded',function(){
 
             if(pw.length < 10){
                 $(".pw_bell_s").css('color', '#b3130b');
-                $(".pw_bell_s").text("10자 이상 입력해주세요.");
+                // $(".pw_bell_s").text("10자 이상 입력해주세요.");
                 return false;
             }
 
             if(pw.length >= 10){
                 $(".pw_bell_s").css('color', '#0f851a');
-                $(".pw_bell_s").text("성공!");
+                // $(".pw_bell_s").text("성공!");
                 
             }
 
             if(num.test(pw) == 0 || eng.test(pw) == 0 || spe.test(pw) == 0){
                 $(".pw_bell_t").css('color', '#b3130b');
-                $(".pw_bell_t").text("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+                // $(".pw_bell_t").text("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
                 return false;
             }
 
             if(num.test(pw) == 1 && eng.test(pw) == 1 && spe.test(pw) == 1){
                 $(".pw_bell_t").css('color', '#0f851a');
-                $(".pw_bell_t").text("성공!");
+                // $(".pw_bell_t").text("성공!");
                 
             }
-            if(/(\w)\1\1/.test(pw)){
-                $(".pw_bell_u").css('color', '#b3130b');
-                $(".pw_bell_u").text("동일한 숫자 3개 이상 연속 사용 불가");
-                return false;
-            }
-            if(!/(\w)\1\1/.test(pw)){
-                $(".pw_bell_u").css('color', '#0f851a');
-                $(".pw_bell_u").text("성공!");
+            // if(/(\w)\1\1/.test(pw)){
+            //     $(".pw_bell_u").css('color', '#b3130b');
+            //     $(".pw_bell_u").text("동일한 숫자 3개 이상 연속 사용 불가");
+            //     return false;
+            // }
+            // if(!/(\w)\1\1/.test(pw)){
+            //     $(".pw_bell_u").css('color', '#0f851a');
+            //     $(".pw_bell_u").text("성공!");
                 
-            }
+            // }
 
             return true;
             }
