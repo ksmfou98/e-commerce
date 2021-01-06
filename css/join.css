@@ -175,7 +175,7 @@
 
  
 
-  .birth_day{
+  .birth_day{           /*생년월일 칸 */
     overflow: hidden;
     width: 332px;
     padding-left: 18px;
@@ -185,7 +185,7 @@
 
   
 
-  .birth_day input[type=text]{
+  .birth_day input[type=text]{      /*생년월일 안에있는 input 들 */
     float: left;
     width: 84px;
     height: 40px;
@@ -193,11 +193,11 @@
     text-align: center;
   }
 
-  .bar{
+  .bar{  /*생년 월일 칸 안에 있는 bar */
       float:left;
   }
 
-  .bar::after{
+  .bar::after{   /*생년 월일 칸 안에 있는 bar */
     content: "/";
     float: left;
     width: 22px;
@@ -208,28 +208,28 @@
     text-align: center;
   }
 
-  .boder_btom{
+  .boder_btom{       /*가입하기 위에 줄 */
       border-bottom: 2px solid black;
   }
 
-  .btom_line{
+  .btom_line{  /*가입 하기 위에 줄 */
       height:64px;
       margin-bottom:19px;
   }
 
-  .form_footer{
+  .form_footer{   /*footer로 부터 가입하기 사이 간격 */
     padding-top: 40px;
     text-align: center;
   }
 
-  .btn_join{
+  .btn_join{    /*가입하기 버튼 */
     width: 240px;
     height: 56px;
     font-size: 16px;
     line-height: 41px;
   }
 
-  #formSubmit .active{
+  #formSubmit .active{  /*가입하기 버튼 */
     border: 1px solid #5f0081;
     background-color: #5f0080;
     color: #fff;
@@ -311,25 +311,25 @@
     left:-329px;
   }
 
-  #content .pw_bell_f.on{
+  #content .pw_bell_f.on{    /*비밀번호 입력칸 활성화 되면 길이 늘어나게 */
     height: 115px;
   }
 
   
 
 
-  .pw2_bell_f .pw2_txt_case1{
+  .pw2_bell_f .pw2_bell_s{    /*동일한 비밀번호를 입력해주세요 */
     display:none;
     top:53px;
     left:-329px;
   }
 
 
-  #content .pw2_bell_f.on{
+  #content .pw2_bell_f.on{      /* 비밀번호 확인칸 활성화되면 길이 늘어나게 */
     height:101px;
   }
 
-  #content .id_bell_s.on, .id_bell_t.on, .pw_bell_s.on, .pw_bell_t.on, .pw_bell_u.on, .pw2_bell_s.on{
+  #content .id_bell_s.on, .id_bell_t.on, .pw_bell_s.on, .pw_bell_t.on, .pw_bell_u.on, .pw2_bell_s.on{    /*공통분모 묶기 */
     display:block;
     position:absolute;
     font-size:12px;
@@ -341,7 +341,7 @@
     height:200px;
   }
 
-  #juso.on{
+  #juso.on{             /* 주소가 입력됐을떄 주소버튼 작게만드는거 */
     position: absolute;
     color: #5f0080;
     left: 500px;
@@ -351,18 +351,18 @@
     top: 8px;
   }
 
-  #user_address{
+  #user_address{         /*주소 칸 */
     display:none;
   }
 
-  #user_detail_address{
+  #user_detail_address{  /*상세주소 칸 */
     display:none;
   }
 
 
 
 
-  #user_address.on{
+  #user_address.on{    /* 주소 칸 활성화 됐을 때 */
     display:block;
     border: 1px solid #ced4da;
     width: 332px;
@@ -373,7 +373,7 @@
     border-radius: 0.25rem;
   }
 
-  #user_detail_address.on{
+  #user_detail_address.on{   /*상세 주소 칸 활성화 됐을 때 */
     display:block;
     width: 332px;
     border: 1px solid #ced4da;
