@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded',function(){
+window.addEventListener('DOMContentLoaded',function(){     //시작
 
 
     // 변수 생성 

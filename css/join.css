@@ -1,7 +1,13 @@
-/* body {             웹페이지 전체 폰트 설정 
-    
-    font-family: 'Noto Sans KR', sans-serif;    구글 폰트임 
-} */
+
+
+ol, ul {
+  list-style-type: none;
+  
+}
+
+#main{      /*main과 footer의 경계선을 주기 위해 main 아래 부분에다가 선 만들어놈 */
+  border-bottom: 1px solid #f7f7f7;
+}
 
 
 
@@ -73,7 +79,7 @@
 #fst{    /*회원 가입 폼에서 왼쪽 부분 ex)아이디, 비밀번호 , 비밀번호확인 등등.. */
     width: 159px;
     padding: 20px 0 0 20px;
-    font-weight: 500;
+    font-weight: 700;
     font-size: 14px;
     color: #333;
     line-height: 20px;
@@ -193,11 +199,11 @@
     text-align: center;
   }
 
-  .bar{  /*생년 월일 칸 안에 있는 bar */
+  #main .bar{  /*생년 월일 칸 안에 있는 bar */
       float:left;
   }
 
-  .bar::after{   /*생년 월일 칸 안에 있는 bar */
+  #main .bar::after{   /*생년 월일 칸 안에 있는 bar */
     content: "/";
     float: left;
     width: 22px;
