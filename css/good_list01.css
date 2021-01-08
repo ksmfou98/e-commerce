@@ -157,24 +157,9 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#goodsList .sort_menu .user_sort .list a.on, #goodsList .sort_menu .user_sort .list a:hover {
+    color: #5f0080;
+}
 
 
 
@@ -187,12 +172,55 @@
 }
 
 
+#goodsList .list_goods .inner_listgoods {
+    overflow:hidden;
+    width: 990px;
+}
+
+
+#goodsList .list_goods .list {
+    overflow: hidden;
+    width: 1008px;
+}
+
+
+#goodsList .list_goods li{
+    float: left;
+    width: 336px;
+    height: 643px;
+    padding: 25px 28px 0 0;
+}
+
+#goodsList .list_goods .item{
+    display:block;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#goodsList .list_goods .thumb{
+    display:block;
+    position: relative;
+    width: 100%;
+    height: 396px;
+    background-color: #f9f8f9;
+
+}
+
+여기서부터
 
 
 
 
 
 
+
+
+
+
+#goodsList .list_goods .info{
+    display:block;
+    padding: 14px 0 10px;
+}
 
 
 
