@@ -1,3 +1,214 @@
-a{
-    
+#main{
+    border-bottom: 1px solid #f7f7f7;
+}
+
+
+#content{
+    min-width: 1050px;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+
+.page_article{
+    width: 1050px;
+    margin: 0 auto;
+}
+
+#lnbMenu{
+    padding-top: 26px;
+}
+
+
+#lnbMenu .inner_lnb{
+    position: relative;
+    padding-left:29px;
+}
+
+#lnbMenu .ico_cate{
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+#lnbMenu .ico_cate .ico{
+    display: none;
+    overflow: hidden;
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+
+#lnbMenu .ico_cate .ico img{
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+}
+
+
+
+#lnbMenu .ico_cate .tit{
+    float: left;
+    padding: 20px 0 0 4px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -.3px;
+}
+
+#lnbMenu .list{
+    overflow: hidden;
+    width: 870px;
+}
+
+#lnbMenu li{
+    float: left;
+}
+
+#lnbMenu li a{
+    overflow: hidden;
+    float: left;
+    padding: 0 13px 7px 12px;
+    border-bottom: 1px solid #ddd;
+    line-height: 20px;
+    font-size: 12px;
+    color: #333;
+    letter-spacing: -.3px;
+    cursor: pointer;
+
+}
+
+
+#lnbMenu li a:hover, #lnbMenu li .on{
+    font-weight: 700;
+    color:#5f0080;
+}
+
+#lnbMenu li.bg{
+    position: absolute;
+    top: 78px;
+    height: 1px;
+    margin-top: -1px;
+    background-color: #5f0080;
+}
+
+#goodsList .list_ability{
+    position: relative;
+}
+
+#goodsList .sort_menu{
+    position: absolute;
+    right: 0;
+    top: -33px;
+    padding: 0 10px;
+}
+
+#goodsList .sort_menu .user_sort{
+    float: right;
+    width: 130px;
+    padding-right: 30px;
+
+}
+
+#goodsList .sort_menu .select_type{
+    position: relative;
+    z-index: 1;
+    height: 44px;
+
+}
+
+#goodsList .sort_menu .user_sort .name_select{
+    padding: 8px 13px 13px 0;
+    font-size: 12px;
+    text-align: right;
+    cursor: pointer;
+}
+
+#goodsList .sort_menu .name_select{
+    display: block;
+    overflow: hidden;
+    padding: 13px 0 13px 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+#goodsList .sort_menu .name_select::after{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 6px;
+    background: url(https://res.kurly.com/pc/service/common/1908/ico_arrow_down_20x20.png) no-repeat 50% 50%;
+    background-size: 10px 10px;
+    vertical-align: 0;
+}
+
+
+#goodsList .sort_menu .list{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 36px;
+    width: 98px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#goodsList .list_goods{
+    overflow: hidden;
+    padding: 0 29px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page_article .layout-pagination{
+    font-size:0;
 }
