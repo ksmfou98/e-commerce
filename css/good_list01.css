@@ -479,3 +479,360 @@ button{
     width: 33px;
     height: 32px;
 }
+
+
+
+
+
+/******************************************************************/
+
+#cartPut .cart_type3 {
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    width: 440px;
+    max-height: 600px;
+    margin-left: -220px;
+    border-radius: 6px;
+    background-color: #fff;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+
+#cartPut .cart_option {
+    background-color: #fff;
+}
+
+#cartPut * {
+    font-family: noto sans;
+    color: #333;
+    letter-spacing: 0;
+}
+
+#cartPut .cart_type3 .inner_option {
+    padding: 0 30px;
+}
+
+
+#cartPut .cart_type3 .list_goods {
+    width: 380px;
+}
+
+
+#cartPut .cart_type3 .list_nopackage {
+    padding-top: 30px;
+    min-height: 148px;
+}
+
+
+#cartPut .cart_type3 .list {
+    overflow: hidden;
+    overflow-y: auto;
+    width: 400px;
+    max-height: 355px;
+    min-height: 120px;
+}
+
+
+#cartPut .cart_option .list {
+    overflow: hidden;
+    padding-bottom: 1px;
+}
+
+#cartPut .cart_type3 .list_nopackage li {
+    border: 0;
+}
+
+#cartPut .cart_type3 .list li {
+    width: 380px;
+    padding: 11px 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+#cartPut .cart_type3 .inner_option .list .name {
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+#cartPut .cart_option .list .name {
+    display: block;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -.6px;
+}
+
+
+#cartPut .cart_type3 .list .option {
+    padding-top: 7px;
+}
+
+
+#cartPut .cart_option .list .option {
+    overflow: hidden;
+}
+
+
+#cartPut .cart_type3 .inner_option .list .count {
+    float: right;
+}
+
+
+#cartPut .cart_option .list .count {
+    overflow: hidden;
+    float: left;
+    width: 88px;
+    height: 30px;
+    border: 1px solid #dddfe1;
+    border-radius: 3px;
+}
+
+
+#cartPut .cart_option .list .down.on {
+    background-image: url(https://res.kurly.com/pc/ico/2010/ico_minus_on.svg);
+}
+
+
+
+#cartPut .cart_option .list .down {
+    background: #fff url(https://res.kurly.com/pc/ico/2010/ico_minus.svg) no-repeat 50% 50%;
+    background-size: 30px 30px;
+}
+
+
+
+#cartPut .cart_option .list .btn {
+    overflow: hidden;
+    float: left;
+    width: 28px;
+    height: 28px;
+    border: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+#cartPut .cart_option .list .inp {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: -1px;
+    padding: 0 0 4px;
+    border: 0;
+    background-color: #fff;
+    font-size: 14px;
+    color: #000;
+    line-height: 18px;
+    text-align: center;
+}
+
+#cartPut .cart_option .list .up.on {
+    background-image: url(https://res.kurly.com/pc/ico/2010/ico_plus_on.svg);
+}
+
+#cartPut .cart_option .list .up {
+    float: right;
+    background: #fff url(https://res.kurly.com/pc/ico/2010/ico_plus.svg) no-repeat 50% 50%;
+    background-size: 30px 30px;
+}
+
+#cartPut .cart_type3 .list .price {
+    float: left;
+    padding: 7px 0 0;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+
+#cartPut .cart_option .list .price {
+    font-weight: 700;
+    text-align: right;
+}
+
+#cartPut .cart_type3 .list .dc_price {
+    padding-right: 4px;
+}
+
+
+#cartPut .cart_type3 .total {
+    padding-top: 20px;
+}
+
+
+#cartPut .cart_option .total .price {
+    overflow: hidden;
+    text-align: right;
+}
+
+#cartPut .cart_type3 .total .tit {
+    float: left;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -.67px;
+    vertical-align: 0;
+    font-weight: 700;
+}
+
+
+#cartPut .cart_type3 .total .sum {
+    float: right;
+    margin-top: -1px;
+}
+
+#cartPut .cart_type3 .total .num {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -1px;
+    padding-left: 8px;
+    font-weight: 800;
+}
+
+#cartPut .cart_type3 .total .won {
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -.67px;
+    vertical-align: 3px;
+    font-weight: 700;
+}
+
+
+#cartPut .cart_type3 .total .txt_point {
+    padding-top: 6px;
+    display: block;
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+    text-align: right;
+}
+
+#cartPut .cart_option .total .ico {
+    display: inline-block;
+    width: 38px;
+    height: 20px;
+    margin-right: 2px;
+    border: 1px solid #e8a828;
+    border-radius: 10px;
+    background-color: #ffbf00;
+    font-weight: 700;
+    font-size: 11px;
+    color: #fff;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: 1px;
+}
+
+#cartPut .cart_option .total .txt_point {
+    display: block;
+    padding-top: 14px;
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+    text-align: right;
+}
+
+
+#cartPut .cart_option .total .emph {
+    font-weight: 700;
+}
+
+#cartPut .cart_type3 .group_btn {
+    overflow: hidden;
+    padding: 20px 0 30px;
+}
+
+#cartPut .cart_type3 .group_btn .btn_type2 {
+    float: left;
+    width: 186px;
+    height: 56px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+#cartPut .cart_type3 .group_btn .btn_type1 .txt_type, #cartPut .cart_type3 .group_btn .btn_type2 .txt_type {
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+    background: 0 0;
+}
+
+#cartPut .cart_option .group_btn .btn_type2 .txt_type {
+    color: #333;
+}
+
+#cartPut .cart_option .group_btn .txt_type {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 2px;
+    border: 0;
+    background: 0 0;
+    font-weight: 700;
+    color: #fff;
+    font-size: 16px;
+    line-height: 52px;
+    letter-spacing: -.1px;
+    text-align: center;
+}
+
+
+
+.btn_type1, .btn_type2 {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 54px;
+    border-radius: 3px;
+    font-size: 0;
+    text-align: center;
+}
+
+
+#cartPut .cart_type3 .group_btn .btn_type1 {
+    float: right;
+    width: 186px;
+    height: 56px;
+    background-color: #5f0080;
+    color: #fff;
+}
+
+.btn_type1 {
+    border: 1px solid #5f0081;
+    
+}
+
+
+/**************화면 흐려지게 하기 ******************************/
+
+
+.bg_loading {
+    position: fixed;
+    z-index: 9998;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+}
+
+
+.loading_show {
+    position: fixed;
+    z-index: 10000;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -16px;
+    width: 32px;
+    height: 32px;
+    background: url(https://res.kurly.com/pc/img/1909/img_loading_128x128.gif) no-repeat 50% 50%;
+    background-size: 16px 16px;
+}
+
+.noBody {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
