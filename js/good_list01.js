@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
 
-        $('.txt_type').click(function(){
+        $('.btn_type2').click(function(){
             $('#cartPut').css('display','none');
             $('.bg_loading').css('display','none');
 
