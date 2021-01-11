@@ -100,6 +100,14 @@ window.addEventListener('DOMContentLoaded',function(){
             
         });
 
+        
+
+        $('.name_select').click(function(){
+            $(".checked").toggle(function(){
+                $('.name_select').css('color', '#5f0080');
+            });
+        });
+
 
 
         
