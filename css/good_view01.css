@@ -933,3 +933,308 @@ b, strong {
 .goods-view-infomation-tab-group {
     border-bottom: 1px solid #bfbfbf;
 }
+
+.goods-view-infomation-tab {
+    float: left;
+    vertical-align: top;
+}
+
+.goods-view-infomation-tab:first-child .goods-view-infomation-tab-anchor {
+    border-left: 1px solid #bfbfbf;
+    width: 170px;
+}
+
+.goods-view-infomation-tab-anchor {
+    position: relative;
+    top: 1px;
+    width: 168px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    display: block;
+    color: #4c4c4c;
+    font-size: 14px;
+    font-family: noto sans;
+    background-color: #f0eef1;
+    border: 1px solid #bfbfbf;
+    border-bottom: 0;
+    border-left: none;
+}
+
+.goods-view-infomation-tab-anchor.__active {
+    background-color: #fff;
+    height: 47px;
+}
+
+.goods-view-infomation-tab-anchor span {
+    font-size: 12px;
+    color: #434343;
+}
+
+.goods-view-infomation-content {
+    padding-top: 60px;
+    min-height: 500px;
+    margin-bottom: 50px;
+}
+
+#goods-infomation {
+    margin-bottom: 100px;
+}
+
+.goods-view-infomation-content {
+    padding-top: 60px;
+    min-height: 500px;
+    margin-bottom: 50px;
+}
+
+table.extra-information {
+    background: #e0e0e0;
+    margin: 30px 0 60px;
+    width: 100%!important;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.extra-information th {
+    width: 15%;
+    background: #f5f5f5;
+    color: #515151;
+}
+
+table.extra-information th, table.extra-information td {
+    font-weight: 400;
+    text-align: left;
+    padding-left: 15px;
+    background: #fff;
+    font-family: Dotum;
+    font-size: 11px;
+    height: 28px;
+    padding: 5px 0 5px 10px;
+    border-width: 1px;
+    line-height: 20px;
+}
+
+table.extra-information td {
+    width: 35%;
+    color: #666;
+}
+
+table.extra-information th {
+    width: 15%;
+    background: #f5f5f5;
+    color: #515151;
+}
+
+.whykurly_area {
+    width: 1000px;
+    margin: 0 auto;
+    color: #000;
+    letter-spacing: -.045em;
+}
+
+.whykurly_area .row:first-child {
+    border-top: 0;
+    padding-top: 44px;
+}
+
+.whykurly_area .tit_whykurly {
+    display: block;
+    font-size: 33px;
+    font-weight: 500;
+    color: #666;
+    text-align: center;
+}
+
+.whykurly_area .txt_area {
+    overflow: hidden;
+    margin-top: 45px;
+    text-align: center;
+}
+
+.whykurly_area .why-kurly .col:first-child {
+    margin-left: 0;
+}
+
+.whykurly_area .txt_area .col {
+    width: 315px;
+    display: inline-block;
+    margin: 43px 0 0 10px;
+    vertical-align: top;
+}
+
+.whykurly_area .txt_area .col .icon {
+    width: 100%;
+    text-align: center;
+}
+
+.whykurly_area .why-kurly .col .icon {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.whykurly_area .why-kurly .col .icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.whykurly_area .why-kurly .col .info .title {
+    color: #5f0080;
+    font-weight: 600;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    line-height: 27px;
+    margin-top: 10px;
+}
+
+.whykurly_area .why-kurly .col .info .desc {
+    display: block;
+}
+
+.whykurly_area .why-kurly .col .info .desc p {
+    display: block;
+    margin-top: 22px;
+    color: #333;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.56;
+    letter-spacing: -.4px;
+    text-align: center;
+}
+
+.whykurly_area .why-kurly .col .info .desc .etc {
+    display: block;
+    width: 100%;
+    height: 19px;
+    margin: 16px 0;
+    font-size: 13px;
+    font-weight: 300;
+    letter-spacing: -.29px;
+    text-align: center;
+    color: #666;
+}
+
+.happy_center.fst {
+    padding-top: 59px;
+    border-top: 2px solid #ddd;
+}
+
+
+.happy_center {
+    overflow: hidden;
+    padding: 0 5px;
+    border-bottom: 1px solid #ddd;
+    font: normal 16px/23px 'Noto Sans';
+    color: #333;
+    letter-spacing: 0;
+}
+
+.happy_center .happy .tit {
+    font-weight: 700;
+    font-size: 28px;
+    color: #666;
+    line-height: 41px;
+    letter-spacing: .8px;
+}
+
+.happy_center .happy .sub {
+    font-weight: 200;
+    padding-top: 31px;
+}
+
+.happy_center .happy .emph {
+    display: block;
+    padding-bottom: 6px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #666;
+}
+
+.happy_center .list {
+    overflow: hidden;
+    width: 100%;
+    padding: 59px 0 72px;
+}
+
+.happy_center .list li {
+    float: left;
+    width: 340px;
+}
+
+.happy_center .list .tit {
+    font-weight: 700;
+    font-size: 18px;
+    color: #5f0080;
+    line-height: 27px;
+}
+
+.happy_center .list .tit::before {
+    content: "";
+    float: left;
+    width: 3px;
+    height: 20px;
+    margin: 5px 10px 0 0;
+    background-color: #5f0080;
+}
+
+.happy_center .list .sub {
+    font-weight: 200;
+    padding-top: 9px;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.happy_center .list .expend {
+    padding-top: 13px;
+    font-weight: 200;
+    font-size: 15px;
+    color: #666;
+    line-height: 22px;
+    letter-spacing: -.4px;
+}
+
+.happy_center .list li:last-child {
+    width: 212px;
+}
+
+.happy_center .unfold {
+    overflow: hidden;
+    position: relative;
+    padding: 16px 0 17px;
+}
+
+.happy_center .unfold .tit {
+    float: left;
+    width: 175px;
+    padding: 0 0 0 13px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #666;
+    line-height: 27px;
+    letter-spacing: 0;
+}
+
+.happy_center .unfold .sub {
+    float: left;
+    width: 650px;
+    padding: 0;
+    line-height: 27px;
+}
+
+.happy_center .happy .sub {
+    font-weight: 200;
+    
+}
+
+.happy_center .unfold .emph {
+    display: inline;
+    padding: 0 8px 0 0;
+    font-weight: 700;
+    font-size: 16px;
+    color: #666;
+}
