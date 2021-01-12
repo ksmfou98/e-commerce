@@ -30,7 +30,8 @@ window.addEventListener('DOMContentLoaded',function(){
 
         
         function cart_button(i){                                // 장바구니 버튼 클릭했을떄 수량,적립금 설정함수
-            $('#cartPut').css('display','block');
+            // $('#cartPut').css('display','block');
+            $('#cartPut').fadeIn(300);                 // 서서히 보이게 설정 완료
             $('.bg_loading').css('display','block');
             $('#cartPut .name').text(product_name[i]);
             $('#cartPut .dc_price').text(product_price[i]);
@@ -126,7 +127,7 @@ window.addEventListener('DOMContentLoaded',function(){
         
         
         
-        $('button[name=chk]:eq(0)').click(function(){
+        $('button[name=chk]:eq(0)').click(function(){              //굉장히 줄이고싶다... 어떻게 줄이지 ... 하..
             cart_button(1);
         });
         $('button[name=chk]:eq(1)').click(function(){
