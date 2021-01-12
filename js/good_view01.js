@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
     $(document).ready(function() {
         var start_price = $('.goods_price .dc_price').text()
-        console.log(start_price);
+        
         var number = $('.inp').val();   //수량
         var cost = $('.goods_price input').val(); ;  // 상품의 가격을 설정해줘야됨.
         $('.emph').text((number*cost)/20 + '원 적립');
@@ -78,12 +78,51 @@ window.addEventListener('DOMContentLoaded',function(){
         });
 
 
+        var imgs;
+        var img_count;
+        var img_position = 1;
+        imgs = $('.__slide-wrapper ul');
+        img_count = imgs.children().length;  //slide ul의 자식, 즉 li의 갯수 = 이미지의 갯수
 
 
 
 
+        $('.__slide-go-left').click(function(){
+            slide_left();
+        });
+
+        $('.__slide-go-right').click(function(){
+            slide_right();
+        });
+
+        function slide_left() {
+            if(img_count > 0){
+                $('.__slide-wrapper ul li').last().prependTo('.__slide-wrapper ul');
+                $('.__slide-wrapper ul').css("left",(-180)+"px");
+                $('.__slide-wrapper ul').stop().animate({
+                    "left":"0px"
+                }, 500, function(){
+    
+                });
+            }
+            return false;
+        }
+
+        function slide_right() {
+            if(img_count > 0){
+                $('.__slide-wrapper ul').stop().animate({
+                    "left": (-180) + "px"
+                }, 500, function(){
+                    $('.__slide-wrapper ul li').first().appendTo('.__slide-wrapper ul');
+                    $('.__slide-wrapper ul').css("left","0px");
+                })
+            }
+            return false;
+        }
 
 
+
+       
 
 
 
