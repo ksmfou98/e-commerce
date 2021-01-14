@@ -9,13 +9,13 @@ window.addEventListener('DOMContentLoaded',function(){
         var noBody = $('.noBody');
 
 
-        var product_name = [];
-        var product_price = [];
-        var product_cost = [];
+        var product_name = [];        //이름 변수 리스트
+        var product_price = [];       //썸네일 가격 변수 리스트
+        var product_cost = [];        //상품 수량변경할떄 쓰는 가격 변수 리스트
 
 
         for(i=0; i < 13; i++){
-            product_name[i] = $('li:nth-child('+ i +') .name').text();
+            product_name[i] = $('li:nth-child('+ i +') .name').text();    //포문으로 리스트 에다가 값을 대입함
             
             product_price[i] = $('li:nth-child('+ i +') .price').text();
             
@@ -32,10 +32,10 @@ window.addEventListener('DOMContentLoaded',function(){
         function cart_button(i){                                // 장바구니 버튼 클릭했을떄 수량,적립금 설정함수
             // $('#cartPut').css('display','block');
             $('#cartPut').fadeIn(300);                 // 서서히 보이게 설정 완료
-            $('.bg_loading').css('display','block');
-            $('#cartPut .name').text(product_name[i]);
-            $('#cartPut .dc_price').text(product_price[i]);
-            $('#cartPut .num').text(product_price[i]);
+            $('.bg_loading').css('display','block');    //주변 흐릿해지게 해는거 온!
+            $('#cartPut .name').text(product_name[i]);      //초기 이름 설정
+            $('#cartPut .dc_price').text(product_price[i]);  // 초기 가격설정
+            $('#cartPut .num').text(product_price[i]);  // 초기 가격설정
         
             noBody.addClass('noBody_on');
         
@@ -125,7 +125,7 @@ window.addEventListener('DOMContentLoaded',function(){
         
         }
         
-        
+        // eq(x) x번째 리스트를 클릭하면 cart_button(y) y번째 버튼을 실행함
         
         $('button[name=chk]:eq(0)').click(function(){              //굉장히 줄이고싶다... 어떻게 줄이지 ... 하..
             cart_button(1);
