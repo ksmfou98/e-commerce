@@ -92,6 +92,8 @@
     background-size: 24px 24px;
 }
 
+
+
 .type_radio input[type="radio"] + .ico {
     display: inline-block;
     position: relative;
@@ -99,6 +101,18 @@
     height: 24px;
  
     border: 0 none;
+}
+
+.type_radio input[type="radio"] + .ico {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border: 0 none;
+    background: url(https://res.kurly.com/mobile/service/common/2003/ico_checkbox.png?v=1) no-repeat 50% 50%;
+    background-size: 24px 24px;
+    vertical-align: -7px;
 }
 
 .screen_out {
