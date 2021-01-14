@@ -61,6 +61,16 @@
     letter-spacing: -.3px;
 }
 
+
+.snb_my{   
+    position:absolute;
+    top:264px;
+    
+    margin-right:-670px;
+}
+
+
+
 .page_aticle.aticle_type2 .page_section {
     float: right;
     width: 820px;
@@ -128,7 +138,7 @@ tbody th{
     width:100px;
 }
 
-tbody input{
+tbody input, textarea{
     border: 1px solid #d4d4d4;
 }
 
@@ -149,7 +159,7 @@ tbody input{
 
 }
 
-input:focus {
+input:focus, textarea:focus {
     outline:1px solid #5f0080;
 }
 
@@ -204,7 +214,8 @@ table td .product_category{
 
 table .text8{
     height:150px;
-    width:550px;
+    width:500px;
+    resize: none;
 }
 
 #image_input{
