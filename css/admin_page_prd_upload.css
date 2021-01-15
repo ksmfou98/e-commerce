@@ -93,6 +93,11 @@ input:focus, textarea:focus {
     width:75px;
 }
 
+.num1{
+    width:45px;
+    text-align: right;
+}
+
 
 .text5{
     width:75px;

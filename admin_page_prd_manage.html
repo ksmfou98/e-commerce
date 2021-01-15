@@ -11,6 +11,14 @@
     <script src="./js/admin_common.js"></script>
     <script src="./js/common.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script>
+        function popup(){
+            var url = "admin_page_prd_modify.html";
+            var name = "popup test";
+            var option = "width = 850, height = 850, top = 400, left = 400, location = no"
+            window.open(url, name, option);
+        }
+    </script>
 </head>
 <body>
     <div id="container">
@@ -357,6 +365,7 @@
                                     <th class="tit_phone">남은 수량</th>
                                     <th class="tit_delivery">배송유형</th>
                                     <th class="tit_modify">수정</th>
+                                    <th class="tit_modify">삭제</th>
                                 </tr>
                             </thead>
                             <tbody id="addrList">
@@ -384,7 +393,10 @@
                                         <span class="delivery star">샛별 배송</span>
                                     </td>
                                     <td>
-                                        <button type="button" class="ico modify">수정하기</button>
+                                        <button type="button" class="ico modify" onclick="popup()" target = "_blank">수정하기</button>
+                                    </td>
+                                    <td class="delete_position">
+                                        <button type="button"  class="product_delete">삭제하기</button>
                                     </td>
                                 </tr>
 
@@ -414,6 +426,9 @@
                                     <td>
                                         <button type="button" class="ico modify">수정하기</button>
                                     </td>
+                                    <td class="delete_position">
+                                        <button type="button"  class="product_delete">삭제하기</button>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -441,6 +456,9 @@
                                     </td>
                                     <td>
                                         <button type="button" class="ico modify">수정하기</button>
+                                    </td>
+                                    <td class="delete_position">
+                                        <button type="button"  class="product_delete">삭제하기</button>
                                     </td>
                                 </tr>
                                 
