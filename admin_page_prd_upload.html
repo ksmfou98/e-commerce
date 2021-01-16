@@ -12,6 +12,7 @@
   <script src="./js/common.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="./js/admin_common.js"></script>
+  <script src="./js/admin_prd_upload.js"></script>
   <script>
         function chkword_name(obj, maxByte){                      // 상품명 글자수 제한 두기
             var strValue = obj.value;         //strValue : 글자수 값을 저장하기 위한 변수
@@ -693,8 +694,9 @@
                                         
                                             <div class="image_add">
                                                 
+                                                
                                                 <input type="file" name="product_main_image" accept="image/*" id="image_input" onchange="set_image(event);">
-                                                <button class="image_input_button"></button>
+                                                <button type="button" class="image_input_button"></button>
                                                 <div id="image_container"></div>
 
                                                 <!--  이미지 업로드하면 미리보기 썸네일 나오기-->
@@ -715,12 +717,13 @@
                                                 </script>
 
                                                 
-
-                                                <button class="re_upload">
+                                                
+                                                <button type="button" class="re_upload">
                                                     <span>
                                                         수정
-                                                    </span></button>
-                                                <button class="remove">
+                                                    </span>
+                                                </button>
+                                                <button type="button" class="remove">
                                                     <span>
                                                         삭제
                                                     </span>
@@ -738,7 +741,7 @@
                                                 <li>
                                                     <div class="sub_image">
                                                         <input type="file" name="product_sub_image" accept="image/*" id="sub_image_input" onchange="set_sub_image(event);">
-                                                        <button class="sub_image_input_button"></button>
+                                                        <button type="button" class="sub_image_input_button"></button>
                                                         <div id="sub_image_container"></div>
 
                                                         <!--  이미지 업로드하면 미리보기 썸네일 나오기-->
@@ -763,12 +766,12 @@
                                             </ul>
                                             <div class="sub_button">
                                                 
-                                                <button class="sub_re_upload">
+                                                <button type="button" class="sub_re_upload">
                                                     <span>
                                                         수정
                                                     </span>
                                                 </button>
-                                                <button class="sub_remove">
+                                                <button type="button" class="sub_remove">
                                                     <span>
                                                         삭제
                                                     </span>
