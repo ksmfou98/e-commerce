@@ -1,0 +1,416 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+
+
+
+
+#wrap, .preload:after {
+    height: 100%;
+    width: 100%;
+}
+
+.layout-main-wrapper.no_relative {
+    position: static;
+}
+
+#header {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #fff;
+    text-align: center;
+}
+
+#header .logo .tit {
+    display: block;
+    overflow: hidden;
+    padding: 17px 50px 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    line-height: 20px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#header .link_back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: url(https://res.kurly.com/mobile/service/common/2006/ico_navi_back.svg?v=1) no-repeat 0 50%;
+    background-size: 50px 50px;
+}
+
+.screen_out {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+#header .cart_count {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: url(https://res.kurly.com/mobile/service/common/2011/ico_navi_cart_black.svg) no-repeat 50% 50%;
+    background-size: 50px 50px;
+}
+
+#header .cart_count .num_count {
+    display: none;
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    width: 18px;
+    height: 18px;
+    padding-top: 1px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background-color: #5f0080;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#header-bottom {
+    height: calc(49px + env(safe-area-inset-bottom));
+}
+
+.menu_shortcut {
+    position: fixed;
+    z-index: 300;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 49px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu_shortcut .list {
+    overflow: hidden;
+}
+
+.menu_shortcut li {
+    float: left;
+    width: 25%;
+}
+
+.menu_shortcut a {
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    padding: 3px 0 0;
+    font-size: 10px;
+    color: #333;
+    line-height: 20px;
+    text-align: center;
+}
+
+.menu_shortcut .shortcut_home:before {
+    background-image: url(https://res.kurly.com/mobile/service/common/2011/ico_home.svg?ver=2);
+}
+
+.menu_shortcut a:before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 25px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 24px 24px;
+}
+
+.menu_shortcut .shortcut_menu:before {
+    background-image: url(https://res.kurly.com/mobile/service/common/2011/ico_cate.svg?ver=2);
+}
+
+
+.menu_shortcut .shortcut_search:before {
+    background-image: url(https://res.kurly.com/mobile/service/common/2011/ico_search.svg?ver=2);
+}
+
+
+
+.menu_shortcut li:last-child {
+    float: none;
+    width: auto;
+}
+
+.menu_shortcut .shortcut_mypage {
+    position: relative;
+}
+
+.menu_shortcut .on {
+    color: #5f0080;
+}
+
+.menu_shortcut .on.shortcut_mypage:before {
+    background-image: url(https://res.kurly.com/mobile/service/common/2011/ico_mypage_on.svg?ver=2);
+}
+
+.section_join {
+    background-color: #fff;
+}
+
+.user_form {
+    min-height: 100%;
+    padding: 0 0 70px;
+    color: #333;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+.user_reg .join_cell {
+    padding: 0 20px;
+}
+
+.user_reg .tit {
+    overflow: hidden;
+    padding: 18px 0 7px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+}
+
+.user_reg .tit .ico {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #ee6a7b;
+    vertical-align: top;
+}
+
+.field_id .desc {
+    position: relative;
+    padding-right: 93px;
+}
+
+.user_reg .desc {
+    width: 100%;
+    color: #666;
+}
+
+input[type=search], input[type=email], input[type=password], input[type=text], input[type=number], textarea, .field_address .txt_address, .birth_day {
+    width: 100%;
+    height: 48px;
+    padding: 0 11px 1px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+
+
+.user_reg .btn.default {
+    border: 1px solid #5f0080;
+    background-color: #fff;
+    color: #5f0080;
+}
+
+#appStyle .field_id .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 85px;
+}
+
+.user_reg .btn {
+    display: block;
+    width: 100%;
+    height: 48px;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 46px;
+    text-align: center;
+    outline: none;
+}
+
+.user_reg .desc:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+    clear: both;
+}
+
+.user_reg .txt_guide {
+    display: none;
+    padding: 9px 0 0;
+    margin-bottom: -1px;
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    clear: both;
+}
+
+.user_reg .txt_guide .txt {
+    display: block;
+    word-break: break-all;
+    letter-spacing: -.3px;
+}
+
+
+.field_id .txt_guide .txt:before, .field_pw .txt_guide .txt:before, .field_newpw .txt_guide .txt:before {
+    content: "\2022";
+    display: inline-block;
+    padding-right: 2px;
+    font-size: 12px;
+    vertical-align: 0;
+}
+
+.user_reg .join_cell:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    text-indent: -9999px;
+    clear: both;
+}
+
+#appStyle .field_email .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 85px;
+}
+
+.field_email .desc {
+    position: relative;
+    padding-right: 93px;
+}
+
+#addressSearch {
+    display: block;
+    position: relative;
+    padding: 11px 50px 9px 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #ccc;
+    line-height: 24px;
+}
+
+#addressNo {
+    padding-bottom: 2px;
+}
+
+#selectAddress, #selectAddressSub {
+    display: block;
+}
+
+#addr {
+    color: #333;
+}
+
+#delivery {
+    padding: 4px 0 1px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#selectAddressSub {
+    position: relative;
+    padding: 12px 0 2px;
+}
+
+.field_address .txt {
+    padding-top: 8px;
+    font-size: 12px;
+    color: #999;
+}
+
+.section_join .field_birth .birth_day {
+    padding-top: 4px;
+}
+
+.section_join .birth_day input[name=year], .section_join .birth_day input[name="month"], .section_join .birth_day input[name="day"] {
+    float: left;
+    width: 30%;
+    height: 39px;
+    padding: 0;
+    border: 0;
+    text-align: center;
+}
+
+.section_join .birth_day .bar {
+    overflow: hidden;
+    float: left;
+    width: 3%;
+    height: 39px;
+    color: #ccc;
+    line-height: 39px;
+}
+
+input::placeholder{
+    color: #ddd;
+}
+
+.reg_agree {
+    border-top: 10px solid #f4f4f4;
+    background-color: #fff;
+}
+
+.join_submit {
+    padding: 19px 20px 0;
+}
+
+.user_reg .btn.active {
+    border: 1px solid #5f0081;
+    background-color: #5f0080;
+    color: #fff;
+}
+
+#addressSearch:after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    background: url(https://res.kurly.com/mobile/service/common/2006/ico_search_address.svg) no-repeat 50% 50%;
+    background-size: 20px 20px;
+}
+
+
+#user_address{
+    display:none;
+    margin-bottom: 12px;
+}

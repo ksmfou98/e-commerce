@@ -27,3 +27,5 @@
 - admin_page_prd_upload -> 이미지 버튼 클릭시 새로고침 되는 현상 제거
 - admin_page_prd_manage -> 상품 삭제 기능 추가 , 모든 상품이 삭제 됐을 경우 "상품이 없습니다"로 화면 구성
 - admin_page -> 왼쪽 관리자 퀵메뉴 스크롤 확 내렸을 때 footer로 영역 침범하는 오류 제거
+- join_mobile 생성 -> join페이지로 데스크탑으로 접속시 자동 데스크탑 css , 모바일로 접속시 자동 모바일 css
+- join, join_mobile -> 아이디,비밀번호 유효성 검사 실시간으로 변경

@@ -261,6 +261,10 @@ ol, ul {
     position:relative;
   }
 
+  #main #content .id_bell_f{
+    padding-top: 19px;
+  }
+
   .id_bell_f .id_txt_case1{  /*6자 이상의 영문 혹은 영문과 숫자를 조합 */
     display:none;
     top:51px;
@@ -415,39 +419,6 @@ ol, ul {
 
 
 
-
-
-
-
-
-
-
-/* @media (max-width: 720px){      모바일로 변경할때 사용  https://dongvelopment.tistory.com/44  참고
-  #header{
-    display:none;
-  }
-  #main{
-    position:absolute;
-    top:0;
-    right:0;
-  }
-
-  #footer{
-    display:none;
-  }
-}
-
-@media (min-width: 720px) and (max-width:990px){
-  .class{
-    height:500px;
-  }
-}
-
-@media (min-width:990px){
-  .class{
-    height:500px;
-  }
-} */
 
 
 

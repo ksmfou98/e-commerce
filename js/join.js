@@ -306,9 +306,7 @@ window.addEventListener('DOMContentLoaded',function(){     //시작
 
     function email_overlap_check() {
 
-        // $('.inpt_email').change(function () {
-            
-        // })
+        
     
     
         if ($('.inpt_email').val() == '') {
