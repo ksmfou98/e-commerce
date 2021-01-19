@@ -425,7 +425,7 @@ input::placeholder{
     z-index: 9999;
     background-color: rgba(0,0,0,.6);
     color: #fff;
-    /* display:none; */
+    display:none;
 }
 
 .layout-layer-popup-wrapper {
@@ -504,3 +504,78 @@ input::placeholder{
 }
 
 
+.research_address{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    border: 1px solid #5f0081;
+    border-radius: 3px;
+    background-color: #5f0080;
+    font-size: 0;
+    text-align: center;
+    margin-top:30px;
+}
+
+.research_address .txt_type{
+    display: inline-block;
+    height: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    line-height: 51px;
+    text-align: center;
+}
+
+
+.layer_prev {
+    overflow: hidden;
+    height: 44px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+
+
+.layer_prev .tit {
+    float: left;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    line-height: 44px;
+    text-align: center;
+}
+
+.no_delivery {
+    overflow: hidden;
+    padding: 30px 15px;
+    background-color: #fff;
+}
+
+.no_delivery .inner_no {
+    padding: 14px 10px 16px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.no_delivery .tit .ico {
+    display: inline-block;
+    height: 18px;
+    padding-left: 19px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #b3130b;
+    line-height: 18px;
+    background: url(https://res.kurly.com/mobile/ico/1908/ico_noti_delivery_popup.png) no-repeat 0 50%;
+    background-size: 14px 14px;
+}
+
+.no_delivery .tit .desc {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    color: #666;
+}
+
+.address_scroll {   /*팝업창 스크롤 크기 100%로 꽉차게 지정해줘야됨 .. 이거안해서 하루종일 화났음;;*/
+    height: 100%;
+}

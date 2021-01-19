@@ -29,3 +29,4 @@
 - admin_page -> 왼쪽 관리자 퀵메뉴 스크롤 확 내렸을 때 footer로 영역 침범하는 오류 제거
 - join_mobile 생성 -> join페이지로 데스크탑으로 접속시 자동 데스크탑 css , 모바일로 접속시 자동 모바일 css
 - join, join_mobile -> 아이디,비밀번호 유효성 검사 실시간으로 변경
+- join_mobile -> 주소검색 구현 완료

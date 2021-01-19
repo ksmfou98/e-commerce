@@ -120,11 +120,22 @@ $(document).ready(function() {
     $('.btn_delivery_close').click(function(){
         $('.layout-layer-popup').css('display', 'none');
         $('#user_address').css('display', 'block');
+        $('#wrap').css('overflow-y', '');
     });
 
     $('#addressSearch').click(function(){
-        $('.layout-layer-popup').css('display', 'block');
+        $('.layout-layer-popup').fadeIn(500);
+        $('#wrap').css('overflow-y', 'hidden');
+        // $('.layout-layer-popup').css('display', 'block');
     });
+
+
+    $('.research_address').click(function(){
+        $('.layer_prev').css('display', 'none');
+        $('#sample3_address').css('display', 'none');
+        $('#sample3_detailAddress').css('display', 'none');
+        $('.no_delivery').css('display', 'none');
+    })
 
 
 
