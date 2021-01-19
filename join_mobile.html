@@ -14,6 +14,15 @@
     <script src="./js/join_mobile.js"></script>
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
+    <script>
+        function init(){
+            var a = $('#my_iframe').contents().find('#someID').html();
+            console.log(a);
+            $('#user_address').text(a);
+            $('#user_address').val(a);
+        }
+    </script>
+
 
     <script>
         function id_check(){
@@ -323,6 +332,19 @@
         </div>
             
 
+    </div>
+
+
+
+    <div class="layout-layer-popup">
+        <div class="layout-layer-popup-wrapper" style="padding: 0px; height: 95%;">
+            <div class="layout-layer-popup-container" style="width:95%; height: 100%; padding:0px">
+                <button class="btn_delivery_close" onclick="init()">닫기</button>
+                <div class="layout-layer-popup-scroller address_scroll" style="height: 866px;">
+                    <iframe id="my_iframe" name="test1" src="http://127.0.0.1:5501/iframe_page.html" frameborder="0" style="width: 100%; height:866px;"></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
