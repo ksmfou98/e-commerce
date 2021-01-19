@@ -149,13 +149,15 @@ $(document).ready(function(){
                 // 우편번호와 주소 정보를 해당 필드에 넣는다.
                
                 document.getElementById("user_address").value = addr;
-                // 커서를 상세주소 필드로 이동한다.
-                document.getElementById("user_detail_address").focus();
+                
+               
 
                 //주소 검색이 완료된 후 변하는 css 목록
                 $('.field_address input').css('display', 'block');
                 $('#addressNo').text('재검색')
 
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById("user_detail_address").focus();
 
 
 
