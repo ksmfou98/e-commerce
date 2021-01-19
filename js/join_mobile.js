@@ -25,7 +25,7 @@ $(document).ready(function() {
         pw_check();              //id_check() 함수 실행    
     });
 
-
+    
     var text_pw2 = $('.field_repw input');
     text_pw2.focus(function(){
         $('.field_repw .txt_guide').css('display', 'block');

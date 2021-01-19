@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded',function(){     //시작
 
 
-    // 변수 생성 
+ 
     const id_bell_f = document.querySelector('.id_bell_f');
     const id_bell_s = document.querySelector('.id_bell_s');
     const id_bell_t = document.querySelector('.id_bell_t');
@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded',function(){     //시작
     const pw_bell_f = document.querySelector('.pw_bell_f');
     const pw_bell_s = document.querySelector('.pw_bell_s');
     const pw_bell_t = document.querySelector('.pw_bell_t');
-    // const pw_bell_u = document.querySelector('.pw_bell_u');  사용하려다가 그냥 안하는게 낫겠음 나중에 필요하면 주석해제 ( 동일한 숫자 3개 이상 연속 사용 불가 )
+    
     
 
     const pw2_bell_f = document.querySelector('.pw2_bell_f');

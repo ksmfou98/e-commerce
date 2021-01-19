@@ -15,7 +15,7 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <SCRIPT LANGUAGE="JavaScript">
         
-        if(top.document.location.search != "?mobile")
+        if(top.document.location.search != "?mobile") //접속할때 모바일이면 아래 strGoto 주소의 html로 접속됨
         {
                 var strGoto = "join_mobile.html";
                 var str = window.navigator.userAgent.toLowerCase();
@@ -26,7 +26,7 @@
         
         </SCRIPT>
     <script>
-        // onsubmit 관련된 코드짜기      js파일에 하니깐 html에서 불러오질 못함....;;;;;;;;;;;;;;;;;;;;에바임
+        // onsubmit 관련된 코드짜기      
 
           function on_id_check(){          //id 검사 함수
             var id = $("#submit_check_id").val();
