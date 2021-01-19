@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/join_moblie.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="./js/join_mobile.js"></script>
 </head>
 <body>
     
-    <input type="text" id="sample3_address" placeholder="주소"><br>
-    <input type="text" id="sample3_detailAddress" placeholder="상세주소">
-    <button type="button" class="test_test">확인</button>
+    
+    <input type="text" id="sample3_address" placeholder="주소" style="display:none;"><br>
+    <input type="text" id="sample3_detailAddress" placeholder="상세주소" style="display:none;">
+    <button type="button" class="research_address" onclick="sample3_execDaumPostcode()" style="display:none;">주소 재검색</button>
     <div id="someID" style="display:none;">주소</div>
-    <button type="button" class="research_address" onclick="sample3_execDaumPostcode()">주소 재검색</button>
+    
 
 
 
-    <div id="wrap" style="display:none;border:1px solid;width:500px;height:300px;margin:5px 0;position:relative">
+    <div id="wrap" style="display:none;margin:5px 0; height:890px; ">
     </div>
 
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -69,8 +71,13 @@
                     // 우편번호와 주소 정보를 해당 필드에 넣는다.
                     // document.getElementById('sample3_postcode').value = data.zonecode;
                     document.getElementById("sample3_address").value = addr;
-                    // 커서를 상세주소 필드로 이동한다.
-                    document.getElementById("sample3_detailAddress").focus();
+                    $('#sample3_address').css('display', 'block');
+                    $('#sample3_detailAddress').css('display', 'block');
+                    $('.address_select').css('display', 'block');
+                    $('.research_address').css('display', 'block');
+                    
+                    // // 커서를 상세주소 필드로 이동한다.
+                    // document.getElementById("sample3_detailAddress").focus();
 
                     // iframe을 넣은 element를 안보이게 한다.
                     // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
@@ -94,9 +101,10 @@
 
         sample3_execDaumPostcode();
 
-        $('.test_test').click(function(){
+        $('#sample3_detailAddress').click(function(){
             a = $('#sample3_address').val();
             $('#someID').text(a);
+            console.log(a)
         });
 
        
