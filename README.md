@@ -23,6 +23,7 @@
 
 **2021-01-14 ~ 2021-01-21**         
 : 주문 관리 페이지 구현
+- admin_page-prd-manage -> 상품 수정 기능 추가
 - admin_page_prd_upload -> 이미지 수정, 삭제 기능 추가   
 - admin_page_prd_upload -> 이미지 버튼 클릭시 새로고침 되는 현상 제거
 - admin_page_prd_manage -> 상품 삭제 기능 추가 , 모든 상품이 삭제 됐을 경우 "상품이 없습니다"로 화면 구성
@@ -30,3 +31,4 @@
 - join_mobile 생성 -> join페이지로 데스크탑으로 접속시 자동 데스크탑 css , 모바일로 접속시 자동 모바일 css
 - join, join_mobile -> 아이디,비밀번호 유효성 검사 실시간으로 변경
 - join_mobile -> 주소검색 구현 완료
+- good_view에 후기 게시판 템플릿 완료
