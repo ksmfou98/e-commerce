@@ -36,7 +36,9 @@ window.addEventListener('DOMContentLoaded',function(){
             $('#cartPut .name').text(product_name[i]);      //초기 이름 설정
             $('#cartPut .dc_price').text(product_price[i]);  // 초기 가격설정
             $('#cartPut .num').text(product_price[i]);  // 초기 가격설정
-        
+
+            $('.count_num').text(i);
+    
             noBody.addClass('noBody_on');
         
         
@@ -249,6 +251,37 @@ window.addEventListener('DOMContentLoaded',function(){
                 $('.name_select').css('color', '#5f0080');
             });
         });
+
+
+
+
+        // $('.btn_type1 .txt_type').click(function(){
+
+            
+            
+           
+        //     product_name = $('#cartPut .list_goods .name');
+        //     console.log(product_name.text());
+
+        //     $.ajax({
+        //       type: "GET",
+        //       url: "./id_check?id="+product_name,    //해당 url로 데이터를 넘김
+        //       data: {
+        //         'username': $('#cartPut .list_goods .name').text()
+        //       },
+        //       datatype: 'json',
+        //       success: function (data) {
+        //         console.log(data['overlap']);
+        //         if (data['overlap'] == "fail") {
+        //           console.log('성공');
+        //           return;
+        //         } else {
+        //           console.log('성공');
+        //           return;
+        //         }
+        //       }
+        //     });
+        // });
 
 
 
