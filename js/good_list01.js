@@ -112,8 +112,8 @@ window.addEventListener('DOMContentLoaded',function(){
             });
         
             $('.btn_type2').click(function(){
-                $('#cartPut').css('display','none');
-                $('.bg_loading').css('display','none');
+                $('#cartPut').hide();
+                $('.bg_loading').hide();
         
                 noBody.removeClass('noBody_on');
                 ///// 닫기 눌렀으면 원래값으로 초기화 시켜줘야됨 ////
