@@ -129,43 +129,106 @@ window.addEventListener('DOMContentLoaded',function(){
         
         // eq(x) x번째 리스트를 클릭하면 cart_button(y) y번째 버튼을 실행함
         
-        $('button[name=chk]:eq(0)').click(function(){              //굉장히 줄이고싶다... 어떻게 줄이지 ... 하..
-            cart_button(1);
-        });
-        $('button[name=chk]:eq(1)').click(function(){
-            cart_button(2);
-        });
-        $('button[name=chk]:eq(2)').click(function(){
-            cart_button(3);
-        });
-        $('button[name=chk]:eq(3)').click(function(){
-            cart_button(4);
-        });
-        $('button[name=chk]:eq(4)').click(function(){
-            cart_button(5);
-        });
-        $('button[name=chk]:eq(5)').click(function(){
-            cart_button(6);
-        });
-        $('button[name=chk]:eq(6)').click(function(){
-            cart_button(7);
-        });
-        $('button[name=chk]:eq(7)').click(function(){
-            cart_button(8);
-        });
-        $('button[name=chk]:eq(8)').click(function(){
-            cart_button(9);
-        });
-        $('button[name=chk]:eq(9)').click(function(){
-            cart_button(10);
-        });
-        $('button[name=chk]:eq(10)').click(function(){
-            cart_button(11);
-        });
-        $('button[name=chk]:eq(11)').click(function(){
-            cart_button(12);
-        });
+        // $('button[name=chk]:eq(0)').click(function(){              //굉장히 줄이고싶다... 어떻게 줄이지 ... 하..
+        //     cart_button(1);
+        // });
+        // $('button[name=chk]:eq(1)').click(function(){
+        //     cart_button(2);
+        // });
+        // $('button[name=chk]:eq(2)').click(function(){
+        //     cart_button(3);
+        // });
+        // $('button[name=chk]:eq(3)').click(function(){
+        //     cart_button(4);
+        // });
+        // $('button[name=chk]:eq(4)').click(function(){
+        //     cart_button(5);
+        // });
+        // $('button[name=chk]:eq(5)').click(function(){
+        //     cart_button(6);
+        // });
+        // $('button[name=chk]:eq(6)').click(function(){
+        //     cart_button(7);
+        // });
+        // $('button[name=chk]:eq(7)').click(function(){
+        //     cart_button(8);
+        // });
+        // $('button[name=chk]:eq(8)').click(function(){
+        //     cart_button(9);
+        // });
+        // $('button[name=chk]:eq(9)').click(function(){
+        //     cart_button(10);
+        // });
+        // $('button[name=chk]:eq(10)').click(function(){
+        //     cart_button(11);
+        // });
+        // $('button[name=chk]:eq(11)').click(function(){
+        //     cart_button(12);
+        // });
 
+        $('button[name=chk]').click(function(){             // 위에꺼 줄인거 성공!
+            var _index =$('button[name=chk]').index(this);
+            cart_button(_index+1);
+        });
+            
+           
+        
+
+
+
+
+
+
+
+        //카테고리 클릭시 활성화되면서 움직이는 bar
+
+        $('li[name=cate_gory]').click(function(){                  // li태그에서 name이 cate_gory인걸 클릭했을 때
+            var cate_index = $('li[name=cate_gory]').index(this);  // 변수 cate_index에다 , 현재 클릭한 name=category의 인덱스를 저장
+            
+
+            for(i=0;i<$('.inner_lnb ul li').length;i++){           // li의 갯수만큼 반복해서 on이라는 클래스를 가지고 있는 애를 찾아서 on 삭제
+                if($('.inner_lnb ul li a').hasClass("on") === true){      // 여기서 on은 글자색 보라색으로 해주는 css클래스요소
+                    $('.inner_lnb ul li a').removeClass('on');            // 기존에 있던 on은 비활성화 시키고 , 이번에 클릭한 요소에다가 on을 활성화 시키기 위함임
+                }
+            }
+            $('.inner_lnb ul li:eq(' + cate_index + ') a').addClass('on');  // 위에서 기존에있던 on을 비활성화 시켰으니 , 방금 클릭한 얘 한테 on을 활성화 해줌
+
+            var change_bg = $('.inner_lnb ul li:eq(' + cate_index + ') a').innerWidth();  //change_bg라는 변수에다가 방금 클릭한 a태그의 가로길이 값을 저장(막대 바 크기 조절을 위해)
+            
+            
+            
+
+            var pos = $('.inner_lnb ul li:eq(' + cate_index + ') a').position()  // 변수 pos에다가 현재 클릭한 a 태그의 위치값 저장
+            
+            $('.bg_loading').css('display', 'block'); // 로딩창 display block 했다가
+            setTimeout(function() {
+                $('.bg_loading').css('display', 'none');  //0.5초 뒤에 다시 로딩창 display none 하기
+            }, 500);
+
+            
+
+
+
+
+            $('.bg').stop().animate({    //bg막대 이동 animate실행
+                "left": pos.left + "px",  //left값은 위에서 구한 pos의 left값 만큼 이동
+                "bottom" : pos.bottom + "px" // bottom은 pos의 bottom값 만큼 이동
+            }, 150, function(){  // 150의 속도만큼
+                $('.bg').css('width', change_bg+'px');  // 막대길이는 위에서구한 change_bg만큼 변화
+            });
+
+
+        })
+
+        
+
+        
+
+       
+
+
+
+       
 
 
 
@@ -186,6 +249,12 @@ window.addEventListener('DOMContentLoaded',function(){
                 $('.name_select').css('color', '#5f0080');
             });
         });
+
+
+
+
+
+
 
 
 
