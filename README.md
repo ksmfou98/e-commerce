@@ -30,4 +30,9 @@
 - join, join_mobile -> 아이디,비밀번호 유효성 검사 실시간으로 변경
 - join_mobile -> 주소검색 구현 완료
 - good_view에 후기 게시판 템플릿 완료
-- good_list 카테고리 클릭시 bar이동 animate , 글자 색 활성화 비활성화 추가 ,로딩창 display추가 (클릭시 0.5초동안 로딩 버퍼링 아이콘 뜬후 다시 display:none)
+- good_list 카테고리 클릭시 bar이동 animate , 글자 색 활성화 비활성화 추가 ,로딩창 display추가 (클릭시 0.5초동안 로딩 버퍼링 아이콘 뜬후 다시 display:none)    
+
+
+**2021-01-21 ~ 2021-01-28**
+
+- good_list -> 상품 갯수 12개까지 가능에서 제한없음 으로 변경.

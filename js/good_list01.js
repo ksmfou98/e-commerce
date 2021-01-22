@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded',function(){
         var product_cost = [];        //상품 수량변경할떄 쓰는 가격 변수 리스트
 
 
-        for(i=0; i < 13; i++){
+        for(i=0; i < $('.list_goods .inner_listgoods ul li').length+1; i++){
             product_name[i] = $('li:nth-child('+ i +') .name').text();    //포문으로 리스트 에다가 값을 대입함
             
             product_price[i] = $('li:nth-child('+ i +') .price').text();
