@@ -7,7 +7,24 @@ $(document).ready(function(){
         $('#gnbMenu .list_gnb li:nth-child('+ index +') .menu').toggleClass('on'); // 오른쪽 화살표 아이콘 돌아가는거
         $('#gnbMenu .list_gnb li:nth-child('+ index +') .menu span:nth-child(1)').toggle();
         $('#gnbMenu .list_gnb li:nth-child('+ index +') .menu span:nth-child(2)').toggle();
+
+        
     });
+
+    function hideAni () {    //안내 메세지 사라지게 하기
+        const tooltip = $('.location_status');
+        tooltip && setTimeout(() => {
+          tooltip.animate({
+            opacity: 0,
+          }, 300, () => {
+            tooltip.remove();
+          });
+        }, 3000);
+      }
+
+      hideAni();
+
+    
 
 
 });

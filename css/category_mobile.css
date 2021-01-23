@@ -1,3 +1,13 @@
+body, button, input, select, textarea {
+    font-family: applesdgothicneo,apple sd gothic neo,sans-serif;
+    line-height: 1;
+    font-size: 14px;
+    color: #333;
+    letter-spacing: 0;
+}
+
+
+
 #wrap, .preload:after {
     height: 100%;
     width: 100%;
@@ -194,3 +204,38 @@ body #gnbMenu .list_gnb .link_often:after {
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
 }
+
+
+.location_status {
+    position: absolute;
+    right: 49px;
+    top: 68px;
+    max-width: 197px;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #b277fe;
+    font-size: 14px;
+    color: #fff;
+    line-height: 17px;
+    text-align: left;
+}
+
+
+.location_status:before {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: -10px;
+    width: 15px;
+    height: 10px;
+    background: url(https://res.kurly.com/mobile/ico/2006/ico_location_picker.svg) no-repeat 50% 50%;
+}
+
+.location_status .addr {
+    overflow: hidden;
+    width: 100%;
+    font-weight: 700;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
