@@ -67,6 +67,14 @@ body #gnbMenu .list_gnb .link_often:after {
     transition: all ease .5s;
 }
 
+#gnbMenu .list_gnb .menu.on:after {
+    transform: rotate(-180deg);
+}
+
+#gnbMenu .list_gnb .menu.on .txt {
+    color: #5f0080;
+}
+
 #gnbMenu .list_gnb .menu {
     display: block;
     overflow: hidden;
