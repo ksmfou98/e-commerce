@@ -77,18 +77,22 @@
 }
 
 
+#header .location {
+    background: url(https://res.kurly.com/mobile/service/common/2011/ico_navi_location_white.svg?v=2) no-repeat 50% 50%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+#header .location {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    right: 46px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    background: url(https://res.kurly.com/mobile/service/common/2011/ico_navi_location_black.svg?v=2) no-repeat 50% 50%;
+    font-size: 0;
+    text-indent: -9999px;
+}
 
 
 
@@ -197,6 +201,7 @@ body #header_purple{
 #header_purple  .logo .tit {
     color: #fff;
 }
+
 
 #header_purple .logo .tit {
     display: block;
