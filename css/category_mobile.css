@@ -42,6 +42,11 @@ body #gnbMenu .list_gnb .link_often {
     font-size: 16px;
     color: #5f0080;
     line-height: 30px;
+    
+}
+
+body #wrap #gnbMenu ul .slide{  /* 내려오는 효과 주기위한거 */
+    display:none;
 }
 
 

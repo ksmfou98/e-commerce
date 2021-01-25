@@ -1,3 +1,5 @@
+
+
 #header {
     position: fixed;
     z-index: 200;
@@ -277,4 +279,29 @@ body #header_purple  .cart_count {
 
 .menu_shortcut .shortcut_mypage:before {
     background-image: url(https://res.kurly.com/mobile/service/common/2011/ico_mypage.svg?ver=2);
+}
+
+
+.bg_loading {
+    position: fixed;
+    z-index: 9998;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+}
+
+
+.loading_show {
+    position: fixed;
+    z-index: 10000;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -16px;
+    width: 32px;
+    height: 32px;
+    background: url(https://res.kurly.com/pc/img/1909/img_loading_128x128.gif) no-repeat 50% 50%;
+    background-size: 16px 16px;
 }

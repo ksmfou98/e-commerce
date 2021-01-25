@@ -1,5 +1,6 @@
 $(document).ready(function(){
-
+    
+    
 
     $('.shortcut_home').click(function(){
         for(i=0;i<$('.menu_shortcut ul li').length;i++){           // li의 갯수만큼 반복해서 on이라는 클래스를 가지고 있는 애를 찾아서 on 삭제
