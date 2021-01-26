@@ -56,6 +56,140 @@ $(document).ready(function(){
 
 
 
+
+
+
+    var noBody = $('.noBody');
+
+
+    var product_name = [];        //이름 변수 리스트
+    var product_price = [];       //썸네일 가격 변수 리스트
+    var product_cost = [];        //상품 수량변경할떄 쓰는 가격 변수 리스트
+
+
+    for(i=0; i < $('.list_goods ul li').length+1; i++){
+        product_name[i] = $('li:nth-child('+ i +') .name').text();    //포문으로 리스트 에다가 값을 대입함
+        product_price[i] = $('li:nth-child('+ i +') .price').text();
+            
+        product_cost[i] = $('li:nth-child('+ i +') input').val();
+            
+    }
+
+        
+
+        
+        
+
+        
+        function cart_button(i){                                // 장바구니 버튼 클릭했을떄 수량,적립금 설정함수
+            
+            $('#cartPut').fadeIn(300);                 // 서서히 보이게 설정 완료
+            $('.bg_loading').css('display','block');    //주변 흐릿해지게 해는거 온!
+            $('#cartPut .name').text(product_name[i]);      //초기 이름 설정
+            $('#cartPut .dc_price').text(product_price[i]);  // 초기 가격설정
+            $('#cartPut .num').text(product_price[i]);  // 초기 가격설정
+
+            $('.count_num').text(i);
+    
+            noBody.addClass('noBody_on');
+        
+        
+        
+            var number = $('.inp').val();   //수량
+            var cost = product_cost[i];   // 상품의 가격을 설정해줘야됨.
+            $('.emph').text((number*cost)/20 + '원 적립');
+        
+        
+            $('.down').click(function(){
+                if(number > 0){
+                    number--;
+                    $(".inp").val(number);
+                    $(".count_num").text(number);
+                    if(number == 0){               // 0원이면 0출력
+                        $(".num").text(0);
+                    }
+
+                    else if(number*cost < 1000){
+                        $(".num").text(number*cost);
+                    }
+
+
+                    else if((number*cost % 1000) == 0){
+                        
+                        $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
+                    }
+                    else{
+                    
+                    $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
+                    }
+                }
+        
+                if(number < 0){             //0 이하면 false 반환
+                    return false;
+                }
+        
+        
+                $('.emph').text((number*cost)/20 + '원 적립');
+                
+            
+                
+                
+            });
+        
+        
+        
+            $('.up').click(function(){
+                number++;
+                $(".inp").val(number);
+                $(".count_num").text(number);
+                if((number*cost % 1000) == 0){
+                    $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
+                }
+
+                else if(number*cost < 1000){
+                    $(".num").text(number*cost);
+                }
+        
+                else{
+                    $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
+                    
+        
+                }
+        
+        
+        
+                
+                $('.emph').text((number*cost)/20 + '원 적립');
+                
+        
+                
+            });
+        
+            $('.btn_type2').click(function(){
+                $('#cartPut').hide();
+                $('.bg_loading').hide();
+        
+                noBody.removeClass('noBody_on');
+                ///// 닫기 눌렀으면 원래값으로 초기화 시켜줘야됨 ////
+                number = 1;
+                $('.inp').val(1); 
+                $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
+                $('.emph').text((number*cost)/20 + '원 적립');
+        
+                
+            });
+        
+        }
+        
+        
+
+        $('button[name=chk]').click(function(){            
+            var _index =$('button[name=chk]').index(this);
+            cart_button(_index+1);
+        });
+
+
+
    
 
    

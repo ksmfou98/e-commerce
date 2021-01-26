@@ -297,3 +297,295 @@ button {
     font-size: 14px;
     color: #333;
 }
+
+#cartPut .cart_type3 {
+    position: fixed;
+    z-index: 9999;
+    left: 20px;
+    right: 20px;
+    top: 50%;
+    max-height: 90%;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+
+#cartPut .cart_type3 .inner_option {
+    padding: 0 20px;
+}
+
+#cartPut .cart_type3 .list_goods .list {
+    overflow-y: auto;
+    -ms-overflow-style: none;
+}
+
+#cartPut .cart_type3 .list {
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 306px;
+}
+
+#cartPut .cart_type3 .list_goods .list_nopackage li {
+    margin-top: 8px;
+}
+
+#cartPut .cart_type3 .list_goods li:first-child {
+    border-top: 0;
+}
+
+#cartPut .cart_type3 .list_goods li {
+    padding: 13px 0 12px;
+    border: 0;
+    border-radius: 0;
+}
+
+#cartPut .cart_option .list_goods li {
+    background-color: #fff;
+}
+
+#cartPut .cart_option .list_goods .name {
+    display: block;
+    padding: 0 34px 0 0;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -.3px;
+}
+
+#cartPut .cart_type3 .list_goods .option {
+    padding: 11px 0 0;
+}
+
+#cartPut .cart_option .list_goods .option {
+    overflow: hidden;
+}
+
+#cartPut .cart_type3 .list_goods .count {
+    float: right;
+}
+
+#cartPut .cart_option .list_goods .count {
+    overflow: hidden;
+    position: relative;
+    width: 86px;
+    height: 28px;
+    border: 1px solid #dddfe1;
+    border-radius: 4px;
+}
+
+#cartPut .cart_option .list_goods .down {
+    background: url(https://res.kurly.com/mobile/service/goodsview/1910/ico_minus_on.svg) no-repeat 50% 50%;
+    background-size: 28px 28px;
+}
+
+#cartPut .cart_option .list_goods .btn {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 28px;
+    height: 28px;
+    border: 0;
+
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+#cartPut .cart_option .list_goods .inp {
+    float: left;
+    width: 15px;
+    height: 26px;
+    padding: 2px 0 0;
+    border: 0;
+    background-color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333;
+    line-height: 27px;
+    text-align: center;
+    pointer-events: none;
+    
+}
+
+#cartPut .cart_option .list_goods .up {
+    float: right;
+    background: url(https://res.kurly.com/mobile/service/goodsview/1910/ico_plus_on.svg) no-repeat 50% 50%;
+    background-size: 28px 28px;
+}
+
+#cartPut .cart_type3 .list_goods .price {
+    float: left;
+}
+
+#cartPut .cart_option .list_goods .price {
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+}
+
+#cartPut .cart_type3 .list_goods .dc_price {
+    padding-right: 3px;
+}
+
+#cartPut .cart_option .list_goods .dc_price {
+    padding-left: 1px;
+    font-weight: 700;
+}
+
+#cartPut .cart_type3 .total {
+    padding: 13px 0 9px;
+}
+
+#cartPut .cart_option .total .price {
+    overflow: hidden;
+    padding-bottom: 2px;
+}
+
+#cartPut .cart_option .total .tit {
+    float: left;
+    padding-top: 1px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#cartPut .cart_option .total .sum {
+    float: right;
+}
+
+#cartPut .cart_option .total .num {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#cartPut .cart_option .total .won {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#cartPut .cart_option .total .txt_point {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    text-align: right;
+}
+
+#cartPut .cart_option .total .ico {
+    display: inline-block;
+    width: 30px;
+    height: 18px;
+    margin-right: 2px;
+    border: 1px solid #e8a828;
+    border-radius: 9px;
+    background-color: #ffbf00;
+    font-weight: 700;
+    font-size: 10px;
+    color: #fff;
+    line-height: 18px;
+    text-align: center;
+}
+
+#cartPut .cart_option .total .emph {
+    font-weight: 700;
+}
+#cartPut .cart_type3 .group_btn {
+    padding: 10px 4px 19px;
+}
+
+#cartPut .cart_type3 .group_btn {
+    overflow: hidden;
+    position: static;
+}
+
+.layer_btn1, .layer_btn2 {
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+
+#cartPut .cart_type3 .layer_btn2 .btn_type2 {
+    width: 49%;
+    margin: 0 4px 0 -4px;
+}
+
+.layer_btn2 .btn_type2, .layer_btn2 .btn:first-child {
+    float: left;
+}
+
+.btn_type2 {
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.btn_type1, .btn_type2, .btn_type3, .btn_type4, .btn_type5, .btn_type99, .btn_type100 {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 48px;
+    border-radius: 4px;
+    font-size: 0;
+    text-align: center;
+    outline: none;
+}
+
+.layer_btn1 .btn_type1 .txt_type, .layer_btn2 .btn_type1 .txt_type, .layer_btn2 .btn_type2 .txt_type {
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    background: 0 0;
+}
+
+body .btn_type2 .txt_type {
+    color: #333;
+}
+
+.btn_type1 .txt_type, .btn_type2 .txt_type, .btn_type3 .txt_type, .btn_type4 .txt_type, .btn_type5 .txt_type, .btn_type99 .txt_type, .btn_type100 .txt_type {
+    display: inline-block;
+    height: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    line-height: 49px;
+    text-align: center;
+}
+
+.layer_btn2 .lst, .layer_btn2 .btn:last-child, .layer_btn2 .btn_type1 {
+    float: right;
+    background-color: #5f0080;
+    color: #fff;
+}
+
+.btn_type1 {
+    border: 1px solid #5f0081;
+}
+
+#cartPut .cart_type3 .layer_btn2 .lst, #cartPut .cart_type3 .layer_btn2 .btn:last-child, #cartPut .cart_type3 .layer_btn2 .btn_type1 {
+    width: 49%;
+    margin: 0 -4px 0 4px;
+}
+
+.noBody_on {
+    overflow: hidden;
+    /* position: fixed;      지우니깐 오류 바로 해결 됌 ㅋ*/
+    width: 100%;
+    height: 100%;
+}
+
+#cartPut{
+    display:none;
+}
+
+.bg_loading{
+    display:none;
+}
+
+.inp{
+    position: relative;
+    left: 9px;
+}
