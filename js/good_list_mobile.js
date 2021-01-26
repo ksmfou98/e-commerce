@@ -65,14 +65,14 @@ $(document).ready(function(){
     var product_name = [];        //이름 변수 리스트
     var product_price = [];       //썸네일 가격 변수 리스트
     var product_cost = [];        //상품 수량변경할떄 쓰는 가격 변수 리스트
-
+    var product_id = [];          //상품 아이디값 가져오기
 
     for(i=0; i < $('.list_goods ul li').length+1; i++){
         product_name[i] = $('li:nth-child('+ i +') .name').text();    //포문으로 리스트 에다가 값을 대입함
         product_price[i] = $('li:nth-child('+ i +') .price').text();
             
         product_cost[i] = $('li:nth-child('+ i +') input').val();
-            
+        product_id[i] = $('li:nth-child('+ i +') .btn_cart').val();    
     }
 
         
@@ -92,7 +92,10 @@ $(document).ready(function(){
             $('.count_num').text(i);
     
             noBody.addClass('noBody_on');
-        
+            
+            btn_val = product_id[i];
+            $('#cartPut .btn_type1 .txt_type').val(btn_val);
+            console.log(btn_val);
         
         
             var number = $('.inp').val();   //수량
