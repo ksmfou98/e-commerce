@@ -394,13 +394,13 @@ button {
 
 #cartPut .cart_option .list_goods .inp {
     float: left;
-    width: 15px;
+    width: 28px;
     height: 26px;
     padding: 2px 0 0;
     border: 0;
     background-color: #fff;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     color: #333;
     line-height: 27px;
     text-align: center;
@@ -585,7 +585,3 @@ body .btn_type2 .txt_type {
     display:none;
 }
 
-.inp{
-    position: relative;
-    left: 9px;
-}
