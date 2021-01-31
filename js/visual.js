@@ -28,6 +28,15 @@ function move() {
 	}, 3000); // 3초 간격 {코드} 실행
 }
 
+
+	
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function(){ //문서의 로드시점을 DOMContentLoaded로 함. = onload 이벤트보다 먼저 발생하며, 빠른 실행속도가 필요할 때 적합
 	move();
 });
