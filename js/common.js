@@ -1,11 +1,10 @@
 window.addEventListener('DOMContentLoaded',function(){
 
-    const top_event_close= document.querySelector('.top_event_close');
-    top_event_close.addEventListener('click', close);
-    function close(){
-       
+    
+
+    $('.top_event_close').click(function(){
         $("#top_event").slideUp(200)
-    }
+    });
 
 
     const gnb = document.querySelector('.gnb');
@@ -42,6 +41,16 @@ window.addEventListener('DOMContentLoaded',function(){
     inpSearch.addEventListener('blur', function(changeBg) {
         this.style.backgroundColor = '';
     }, true);
+
+    //퀵 베너 따라 내려오기
+    $(window).scroll(function(){
+        var scrollTop = $(document).scrollTop();
+        if (scrollTop < 70) {
+         scrollTop = 70;
+        }
+        $(".qnb").stop();
+        $(".qnb").animate( { "top" : scrollTop });
+        });
 
     
 

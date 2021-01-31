@@ -209,3 +209,21 @@ body, input, select, textarea, button{
 img, video, canvas {
     max-width: 100%;
 }
+
+.square .txt{
+    display:block;
+}
+
+.square .txt:before {
+    content: '\2022';
+    display: inline-block;
+    padding: 0 4px 0 2px;
+    font-size: 12px;
+    vertical-align: 0;
+}
+
+.square{
+    line-height: 18px;
+    font-size:12px;
+    display:none;
+}
