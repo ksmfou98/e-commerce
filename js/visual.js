@@ -17,7 +17,7 @@ function move() {
 		curIndex++; //index	1씩 증가
 
 		//언제까지?
-		if(curIndex === 4) { // 현재 index가 4인 경우,
+		if(curIndex === 5) { // 현재 index가 4인 경우,
 			setTimeout(function(){ //시간지연함수 실행(일정 시간 후 특정 함수/코드를 지연한 뒤 실행)
 				ul.style.transition = '0s'; //transition 삭제
 				ul.style.transform = "translate3d(0px, 0px, 0px)"; //현재 위치에서 이동 없음
