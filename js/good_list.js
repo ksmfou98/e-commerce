@@ -58,23 +58,24 @@ window.addEventListener('DOMContentLoaded',function(){
                     number--;
                     $(".inp").val(number);
                     $(".count_num").text(number);
-                    if(number == 0){               // 0원이면 0출력
-                        $(".num").text(0);
-                    }
+                    // if(number == 0){               // 0원이면 0출력
+                    //     $(".num").text(0);
+                    // }
 
-                    else if(number*cost < 1000){
-                        $(".num").text(number*cost);
-                    }
+                    // else if(number*cost < 1000){
+                    //     $(".num").text(number*cost);
+                    // }
 
 
-                    else if((number*cost % 1000) == 0){
+                    // else if((number*cost % 1000) == 0){
                         
-                        $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
-                    }
-                    else{
+                    //     $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
+                    // }
+                    // else{
                     
-                    $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
-                    }
+                    // $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
+                    // }
+                    $(".num").text(number*cost);
                 }
         
                 if(number < 0){             //0 이하면 false 반환
@@ -97,20 +98,20 @@ window.addEventListener('DOMContentLoaded',function(){
                 number++;
                 $(".inp").val(number);
                 $(".count_num").text(number);
-                if((number*cost % 1000) == 0){
-                    $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
-                }
+                // if((number*cost % 1000) == 0){
+                //     $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
+                // }
 
-                else if(number*cost < 1000){
-                    $(".num").text(number*cost);
-                }
+                // else if(number*cost < 1000){
+                //     $(".num").text(number*cost);
+                // }
         
-                else{
-                    $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
+                // else{
+                //     $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
                     
         
-                }
-        
+                // }
+                $(".num").text(number*cost);
         
         
                 
