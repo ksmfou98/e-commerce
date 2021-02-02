@@ -97,7 +97,7 @@ $(document).ready(function(){                                  // 브라우저�
 		});
 		
 		function rollingStart() {
-			$banner.css("width", $bannerWidth * $bannerLength + "px");
+			// $banner.css("width", $bannerWidth * $bannerLength + "px");
 			
 			//배너의 좌측 위치를 옮겨 준다.
 			$banner.animate({left: - $bannerWidth + "px"}, 1500, function() { //숫자는 롤링 진행되는 시간이다.
