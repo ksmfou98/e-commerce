@@ -20,24 +20,24 @@ window.addEventListener('DOMContentLoaded',function(){
             if(number >= 0){                        // 만약에 수량이 0보다 많으면 ?
                 number--;                          // 목적대로 수량을 1 깍음
                 $(".inp").val(number);             // 깍았으니 수량클래스(.inp)의 값을 바꿔줌
-                // if(number == 0){                   // 수량이 0 이면 0원 출력!
-                //     $(".num").text(0);
-                // }
+                if(number == 0){                   // 수량이 0 이면 0원 출력!
+                    $(".num").text(0);
+                }
 
-                // else if(number*cost < 1000){       // 만약에 가격x수량 했을때 1000원 이하면?   ( 가격 표시할때 콤마로 구별하기 위해서 넣었음 ex) 1,000   1,000,000 이런식으로)
-                //     $(".num").text(number*cost);   // 그냥 가격x수량으로 출력   
-                // }
+                else if(number*cost < 1000){       // 만약에 가격x수량 했을때 1000원 이하면?   ( 가격 표시할때 콤마로 구별하기 위해서 넣었음 ex) 1,000   1,000,000 이런식으로)
+                    $(".num").text(number*cost);   // 그냥 가격x수량으로 출력   
+                }
 
 
-                // else if((number*cost % 1000) == 0){    //만약에 가격x수량이 1000으로 나눴을때 0 이면 (천단위로 끊기위해서임 , 위에서 말했듯이 1,000,000    1,000,000,000 이런식으로)
+                else if((number*cost % 1000) == 0){    //만약에 가격x수량이 1000으로 나눴을때 0 이면 (천단위로 끊기위해서임 , 위에서 말했듯이 1,000,000    1,000,000,000 이런식으로)
                     
-                //     $(".num").text(Math.floor(number*cost/1000) + ',' + '000');  //가격x수량을 1000으로 나눴을때의 몫이랑  콤마랑 000을 붙여줌 ex)3000원이면 3000/1000의 몫은: 3이니깐 3에다 콤마 붙이고 000을 붙임 --> 3,000
-                // }
-                // else{    // 그외 나머지는 
+                    $(".num").text(Math.floor(number*cost/1000) + ',' + '000');  //가격x수량을 1000으로 나눴을때의 몫이랑  콤마랑 000을 붙여줌 ex)3000원이면 3000/1000의 몫은: 3이니깐 3에다 콤마 붙이고 000을 붙임 --> 3,000
+                }
+                else{    // 그외 나머지는 
                 
-                // $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);  // 몫 + 콤마 + 나머지 이렇게해서 표현
-                // }
-                $(".num").text(number*cost);
+                $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);  // 몫 + 콤마 + 나머지 이렇게해서 표현
+                }
+                
             }
     
             if(number < 0){             //0 이하면 false 반환
@@ -57,20 +57,20 @@ window.addEventListener('DOMContentLoaded',function(){
         $('.up').click(function(){            // 수량올리기 버튼 클릭하면?
             number++;// 수량을 1 올려줌
             $(".inp").val(number);  // 올렸으니 수량클래스(.inp)의 값을 바꿔줌
-            // if((number*cost % 1000) == 0){  //만약에 수량x가격이 1000으로 나눴을떄 0 이면(ex 3000 4000 5000) 몫 + 콤마 + 000 을 붙임
-            //     $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
-            // }
+            if((number*cost % 1000) == 0){  //만약에 수량x가격이 1000으로 나눴을떄 0 이면(ex 3000 4000 5000) 몫 + 콤마 + 000 을 붙임
+                $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
+            }
 
-            // else if(number*cost < 1000){  // 만약에 수량x가격이 1000이하면 그냥 수량x가격으로 추력
-            //     $(".num").text(number*cost);
-            // }
+            else if(number*cost < 1000){  // 만약에 수량x가격이 1000이하면 그냥 수량x가격으로 추력
+                $(".num").text(number*cost);
+            }
     
-            // else{  // 그외 나머지는 수량x가격의 몫+ 콤마 + 나머지 로 출력
-            //     $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
+            else{  // 그외 나머지는 수량x가격의 몫+ 콤마 + 나머지 로 출력
+                $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
                 
     
-            // }
-            $(".num").text(number*cost);
+            }
+            
     
     
     
