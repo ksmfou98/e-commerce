@@ -58,23 +58,24 @@ window.addEventListener('DOMContentLoaded',function(){
                     number--;
                     $(".inp").val(number);
                     $(".count_num").text(number);
-                    if(number == 0){               // 0원이면 0출력
-                        $(".num").text(0);
-                    }
+                    // if(number == 0){               // 0원이면 0출력
+                    //     $(".num").text(0);
+                    // }
 
-                    else if(number*cost < 1000){
-                        $(".num").text(number*cost);
-                    }
+                    // else if(number*cost < 1000){
+                    //     $(".num").text(number*cost);
+                    // }
 
 
-                    else if((number*cost % 1000) == 0){
+                    // else if((number*cost % 1000) == 0){
                         
-                        $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
-                    }
-                    else{
+                    //     $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
+                    // }
+                    // else{
                     
-                    $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
-                    }
+                    // $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
+                    // }
+                    $(".num").text(comma(number*cost));
                     
                 }
         
@@ -83,8 +84,8 @@ window.addEventListener('DOMContentLoaded',function(){
                 }
         
         
-                $('.emph').text((number*cost)/20 + '원 적립');
-                
+                // $('.emph').text((number*cost)/20 + '원 적립');
+                $('.emph').text(comma((number*cost)/20) + '원 적립');
             
                 
                 
@@ -98,24 +99,26 @@ window.addEventListener('DOMContentLoaded',function(){
                 number++;
                 $(".inp").val(number);
                 $(".count_num").text(number);
-                if((number*cost % 1000) == 0){
-                    $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
-                }
+                // if((number*cost % 1000) == 0){
+                //     $(".num").text(Math.floor(number*cost/1000) + ',' + '000');
+                // }
 
-                else if(number*cost < 1000){
-                    $(".num").text(number*cost);
-                }
+                // else if(number*cost < 1000){
+                //     $(".num").text(number*cost);
+                // }
         
-                else{
-                    $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
+                // else{
+                //     $(".num").text(Math.floor(number*cost/1000) + ',' + number*cost%1000);
                     
         
-                }
+                // }
+                $(".num").text(comma(number*cost));
                 
         
         
                 
-                $('.emph').text((number*cost)/20 + '원 적립');
+                // $('.emph').text((number*cost)/20 + '원 적립');
+                $('.emph').text(comma((number*cost)/20) + '원 적립');
                 
         
                 
@@ -228,7 +231,34 @@ window.addEventListener('DOMContentLoaded',function(){
             });
 
 
-        })
+        });
+
+
+
+        function comma(num){          //콤마찍는 함수
+            var len, point, str; 
+               
+            num = num + ""; 
+            point = num.length % 3 ;
+            len = num.length; 
+           
+            str = num.substring(0, point); 
+            while (point < len) { 
+                if (str != "") str += ","; 
+                str += num.substring(point, point + 3); 
+                point += 3; 
+            } 
+             
+            return str;
+         
+        }
+        
+
+        
+
+       
+        
+        
 
 
        
