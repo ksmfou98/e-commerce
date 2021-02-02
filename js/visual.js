@@ -78,7 +78,7 @@ $(document).ready(function(){                                  // 브라우저�
 		var $banner = $(".swipe").find("ul");
 
 		var $bannerWidth = $banner.children().outerWidth();//배너 이미지의 폭
-		var $bannerLength = $banner.children().length;//배너 이미지의 갯수
+		// var $bannerLength = $banner.children().length;//배너 이미지의 갯수
 		var rollingId;
 
 		//정해진 초마다 함수 실행
