@@ -688,7 +688,7 @@
 .inner_footer .cc_tit {
     padding: 29px 0 2px;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
     color: #333;
     line-height: 24px;
 }
@@ -711,7 +711,7 @@
 .inner_footer .cc_call .tit {
     padding-top: 4px;
     font-weight: 800;
-    font-size: 28px;
+    font-size: 18px;
     color: #333;
     line-height: 36px;
     letter-spacing: -.5px;
@@ -855,11 +855,35 @@
 
 
 
+/*  footer 제작 */
+
+.footer_title{
+    font-weight: 700;
+    font-size:30px;
+    text-align: center;
+}
+
+.footer_left_title{
+    font-weight: 700;
+    font-size:30px;
+    padding: 10px 0px 15px 25px;
+}
+
+.footer_github{
+    padding-left: 15px;
+}
 
 
+.github_id{
+    font-size:20px;
+    padding:10px;
+}
 
-
-
+.footer_github .tit{
+    margin-left:10px;
+    font-size:14px;
+    color:#0863cc;
+}
 
 
 

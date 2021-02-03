@@ -73,7 +73,7 @@ $(document).ready(function(){                                  // 브라우저�
 	
 
 	});
-	// move();
+	
 
 		var $banner = $(".swipe").find("ul");
 
@@ -115,14 +115,4 @@ $(document).ready(function(){                                  // 브라우저�
 
 	
 	
-})
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function(){ //문서의 로드시점을 DOMContentLoaded로 함. = onload 이벤트보다 먼저 발생하며, 빠른 실행속도가 필요할 때 적합
-	
 });
-// 참고: https://takeknowledge.tistory.com/34
