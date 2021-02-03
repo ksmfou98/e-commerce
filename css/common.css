@@ -855,38 +855,6 @@
 
 
 
-/*  footer 제작 */
-
-.footer_title{
-    font-weight: 700;
-    font-size:30px;
-    text-align: center;
-}
-
-.footer_left_title{
-    font-weight: 700;
-    font-size:30px;
-    padding: 10px 0px 15px 25px;
-}
-
-.footer_github{
-    padding-left: 15px;
-}
-
-
-.github_id{
-    font-size:20px;
-    padding:10px;
-}
-
-.footer_github .tit{
-    margin-left:10px;
-    font-size:14px;
-    color:#0863cc;
-}
-
-
-
 
 
 
