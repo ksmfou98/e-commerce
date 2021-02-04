@@ -1,0 +1,153 @@
+#container, #content{
+    position:relative;
+}
+
+#main{
+    border-bottom: 1px solid #f7f7f7;
+}
+
+#content{
+    min-width:1050px;
+    padding-bottom: 120px;
+}
+
+.mypage_top {
+    width: 100%;
+    padding: 50px 0;
+    margin-bottom: -20px;
+    background-color: #f7f7f7;
+}
+
+.page_aticle {
+    margin: 0 auto;
+}
+
+.mypage_top .mypagetop_user {
+    overflow: hidden;
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.mypage_top .inner_mypagetop {
+    overflow: hidden;
+    width: 100%;
+    background: url(https://res.kurly.com/pc/service/common/1904/bg_mypagetop.png) repeat-y 0 0;
+}
+
+
+.mypage_top .grade_user {
+    float: left;
+    width: 444px;
+    height: 100%;
+    padding: 28px 0 30px 30px;
+    background-color: #fff;
+}
+
+.mypage_top .grade_user .grade {
+    overflow: hidden;
+    width: 100%;
+    padding-right: 26px;
+}
+
+#main .mypage_top .grade_user .class0 {
+    border: 1px solid #5f0080;
+    background-color: #fff;
+    color: #5f0080;
+}
+
+.mypage_top .grade_user .ico_grade {
+    float: left;
+    width: 64px;
+    height: 64px;
+    margin: 2px 20px 0 0;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    word-break: break-all;
+}
+
+.mypage_top .grade_user .inner_grade {
+    display: table;
+    width: 100%;
+    height: 64px;
+    padding-bottom: 3px;
+}
+
+.mypage_top .grade_user .in_grade {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    line-height: 18px;
+    word-break: keep-all;
+}
+
+.mypage_top .grade_bnenfit {
+    overflow: hidden;
+}
+
+.mypage_top .grade_user .user {
+    overflow: hidden;
+    padding: 2px 0 14px;
+}
+
+.mypage_top .name {
+    overflow: hidden;
+    float: left;
+    max-width: 263px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+    line-height: 28px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.mypage_top .txt {
+    float: left;
+    padding-left: 5px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.mypage_top .grade_user .benefit {
+    padding-top: 2px;
+}
+
+.mypage_top .benefit {
+    font-size: 12px;
+    line-height: 18px;
+    color: #333;
+}
+
+.mypage_top .benefit .tit {
+    color: #5f0080;
+}
+
+.mypage_top .next {
+    overflow: hidden;
+    width: 100%;
+    padding: 22px 0 0 84px;
+}
+
+.mypage_top .next a {
+    float: left;
+    height: 30px;
+    padding-top: 4px;
+    margin-right: 10px;
+    border: 1px solid #f4f4f3;
+    border-radius: 15px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    color: #333;
+    line-height: 18px;
+    text-align: center;
+}
+
+.mypage_top .total_grade {
+    width: 121px;
+}
+
+.mypage_top .next_month {
+    width: 169px;
+}
