@@ -2,6 +2,13 @@
     position:relative;
 }
 
+.page_aticle button, .page_aticle input, .page_aticle select, .page_aticle * {
+    font-family: noto sans;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+
 #main{
     border-bottom: 1px solid #f7f7f7;
 }
@@ -238,7 +245,7 @@
     letter-spacing: -.5px;
 }
 
-#snb .inner_snb {
+#snb .inner_sub{
     border: 1px solid #f2f2f2;
     border-bottom: 0;
 }
