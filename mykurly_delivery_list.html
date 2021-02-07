@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="./css/mykurly_delivery_list.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/mykurly.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        function popup(){
+            var url = "mykurly_address_search.html";        // var url = "product_modify/"+ id;
+            var name = "popup test";
+            var option = "width = 514, height = 384, top = 50px, left = 50px, location = no"
+            window.open(url, name, option);
+        }
+    </script>
 </head>
 <body>
     <div id="container">
@@ -119,7 +129,7 @@
                                 <span id="addrListInfo" class="tit_sub">배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
                             </h2>
                             <div class="new_address">
-                                <button type="button" class="btn" id="newAddressAdd">
+                                <button type="button" class="btn" id="newAddressAdd" onclick="popup()">
                                     <img src="https://res.kurly.com/pc/ico/2006/ico_add_16x16.svg" alt="" class="ico">
                                     새 배송지 추가
                                 </button>
