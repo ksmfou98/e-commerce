@@ -159,6 +159,7 @@
     display: block;
     max-width: 600px;
     margin: 0 auto 10px;
+    padding-top: 20px;
 }
 
 
@@ -214,7 +215,7 @@
 }
 
 .section_review .list_after .btn {
-    
+    display: none;
     float: right;
     height: 34px;
     padding: 0 13px 0 12px;
@@ -227,5 +228,13 @@
 
 .section_review .list_after .btn_del {
     padding-top: 1px;
+}
+
+.section_review .list_after .view {
+    display: none;
+}
+
+.hover{
+    background-color: #fafafa;
 }
 

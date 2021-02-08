@@ -13,10 +13,21 @@
     <script src="./js/mykurly.js"></script>
     <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script>
-        function popup(){
+        function popup_address_add(){    //배송지 추가
+            var popupX = (window.screen.width / 2) - (530 / 2);   // 팝업창을 가운데 띄우기 위한거
+            var popupY = (window.screen.height / 2) - (400 / 2);
             var url = "mykurly_address_search.html";        // var url = "product_modify/"+ id;
             var name = "popup test";
-            var option = "width = 514, height = 384, top = 50px, left = 50px, location = no"
+            var option = "width = 530, height = 400, top = " + popupY + " , left = " + popupX + " , location = no"
+            window.open(url, name, option);
+        }
+
+        function popup_change(){    //수정
+            var popupX = (window.screen.width / 2) - (530 / 2);   // 팝업창을 가운데 띄우기 위한거
+            var popupY = (window.screen.height / 2) - (510 / 2);
+            var url = "mykurly_delivery_modify.html";        // var url = "product_modify/"+ id;
+            var name = "popup";
+            var option = "width = 530, height = 510, top = " + popupY + " , left = " + popupX + " , location = no"
             window.open(url, name, option);
         }
     </script>
@@ -129,7 +140,7 @@
                                 <span id="addrListInfo" class="tit_sub">배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
                             </h2>
                             <div class="new_address">
-                                <button type="button" class="btn" id="newAddressAdd" onclick="popup()">
+                                <button type="button" class="btn" id="newAddressAdd" onclick="popup_address_add()">
                                     <img src="https://res.kurly.com/pc/ico/2006/ico_add_16x16.svg" alt="" class="ico">
                                     새 배송지 추가
                                 </button>
@@ -181,7 +192,7 @@
                                         </td>
 
                                         <td>
-                                            <button type="button" class="ico modify" >
+                                            <button type="button" class="ico modify" onclick="popup_change()">
                                                 수정하기
                                             </button>
                                         </td>
