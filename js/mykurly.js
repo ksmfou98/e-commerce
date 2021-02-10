@@ -110,6 +110,46 @@ $(document).ready(function(){
         $('.list_after li:nth-child('+ a + ') .cont_after .btn_after .btn').toggle();
         
     });
+
+
+    
+
+
+    //비밀번호 조건 만족 불만족 확인하기
+    var text_pw = $('.field_pw input');
+    text_pw.focus(function(){               //포커스 되면
+        $('.field_pw .txt_guide').css('display', 'block');
+    });
+    text_pw.blur(function(){              //포커스에서 벗어나면
+        
+        pw_check();              //id_check() 함수 실행    
+    });
+
+
+    //비밀번호 확인 조건 만족 불만족 확인하기
+
+    var text_pw2 = $('.field_repw input');
+    text_pw2.focus(function(){
+        $('.field_repw .txt_guide').css('display', 'block');
+    });
+    text_pw2.blur(function(){      
+        pw2_check();
+    });
+
+
+    //현재 빔리번호 확인 조건 만족 불만족 확인하기
+
+    var text_pw3 = $('.field_nowpw input');
+    text_pw3.focus(function(){
+        $('.field_nowpw .txt_guide').css('display', 'block');
+    });
+    text_pw3.blur(function(){
+        pw3_check();
+    })
+
+
+
+
         
 
 

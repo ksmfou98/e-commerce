@@ -121,3 +121,25 @@ html body .member_pw .active {
     text-align: center;
     outline: none;
 }
+
+html body #container #main .member_mod {
+    width: 820px;
+}
+
+.member_join {
+    margin: 0 auto;
+}
+
+.member_join .tbl_comm {
+    width: 100%;
+    border-top: 2px solid #333;
+}
+
+html body #container #main .member_mod th {
+    width: 259px;
+    padding-left: 120px;
+}
+
+.field_nowpw .txt_guide{
+    display:none;
+}
