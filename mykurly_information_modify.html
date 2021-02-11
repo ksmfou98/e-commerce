@@ -18,6 +18,7 @@
 
         function pw_check(){
             var pw = $(".field_pw input").val();                   // 변수 pw에 pw값 대입
+            var now_pw = $('.field_nowpw input').val();
 
             var num = /[0-9]/;
             var eng = /[a-zA-Z]/;
@@ -42,6 +43,14 @@
                 $(".field_pw .txt_guide .txt_case2").css('color', '#0f851a');
             }
 
+            if(pw == now_pw){
+                $(".field_pw .txt_guide .txt_case3").css('color', '#b3130b');
+            }
+
+            if(pw != now_pw){
+                $(".field_pw .txt_guide .txt_case3").css('color', '#0f851a'); 
+            }
+
         }
 
 
@@ -64,11 +73,33 @@
                 
                 }
             }
+
         }
 
 
         function pw3_check(){
-            
+
+            pw_overlap_input = document.querySelector('input[name="originalPassword"]');
+    
+            $.ajax({
+            type: "GET",
+            url: "./pw_check?pw="+pw_overlap_input,    //해당 url로 데이터를 넘김
+            data: {
+                'username': $('.field_nowpw input').val()
+            },
+            datatype: 'json',
+            success: function (data) {
+                console.log(data['overlap']);
+                if (data['overlap'] == "fail") {
+                $(".field_nowpw .txt_guide .txt_case4").css('color', '#b3130b');
+                id_overlap_input.focus();
+                return;
+                } else {
+                $(".field_nowpw .txt_guide .txt_case4").css('color', '#0f851a');
+                return;
+                }
+            }
+            });
         }
 
 
@@ -211,14 +242,14 @@
                                             <td>
                                                 <input type="password" name="originalPassword" id="originalPassword">
                                                  <p class="txt_guide square">
-                                                    <span class="txt txt_case4 bad">현재 비밀번호를 확인해주세요</span>
+                                                    <span class="txt txt_case4">현재 비밀번호를 확인해주세요</span>
                                                 </p>
                                             </td>
                                         </tr>
     
                                         <tr class="field_pw">
                                             <th>
-                                                비밀번호
+                                                새 비밀번호
                                                 
                                             </th>
                                             <td>
@@ -239,7 +270,7 @@
     
                                         <tr class="member_pwd field_repw">
                                             <th>
-                                                비밀번호확인
+                                                새 비밀번호확인
                                                 
                                             </th>
                                             <td>

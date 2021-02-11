@@ -137,7 +137,7 @@ $(document).ready(function(){
     });
 
 
-    //현재 빔리번호 확인 조건 만족 불만족 확인하기
+    //현재 비밀번호 확인 조건 만족 불만족 확인하기
 
     var text_pw3 = $('.field_nowpw input');
     text_pw3.focus(function(){
@@ -146,6 +146,38 @@ $(document).ready(function(){
     text_pw3.blur(function(){
         pw3_check();
     })
+
+
+    //이메일 중복 체크
+    $('.field_email .btn').click(function(){
+
+        if ($('.field_email input').val() == '') {    //만약에 아무것도 입력 되지 않은 상태면
+            alert('이메일을 입력해주세요');
+            return;
+        }
+
+        email_overlap_input = document.querySelector('input[name="email"]');
+    
+        $.ajax({
+          type: "GET",
+          url: "./email_check?id="+email_overlap_input,    //해당 url로 데이터를 넘김
+          data: {
+            'email': $('.field_email input').val()
+          },
+          datatype: 'json',
+          success: function (data) {
+            console.log(data['overlap']);
+            if (data['overlap'] == "fail") {
+              alert("이미 존재하는 이메일 입니다.");
+              email_overlap_input.focus();
+              return;
+            } else {
+              alert("사용가능한 이메일 입니다.");
+              return;
+            }
+          }
+        });
+    });
 
 
 
