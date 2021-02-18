@@ -2,6 +2,10 @@ body{
     font-family: -apple-system,blinkmacsystemfont,applesdgothicneo,apple sd gothic neo,Helvetica,noto sans kr,malgun gothic,맑은 고딕,sans-serif;
 }
 
+input::placeholder{
+    color:rgb(194, 193, 193);
+}
+
 #header {
     position: fixed;
     z-index: 200;

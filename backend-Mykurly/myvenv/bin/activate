@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/idohyeon/Desktop/backend-Mykurly/myvenv"
+VIRTUAL_ENV="/Users/idohyeon/Documents/GitHub/e-commerce-clone/backend-Mykurly/myvenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
