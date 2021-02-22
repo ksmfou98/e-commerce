@@ -1,8 +1,11 @@
 $(document).ready(function(){
 
     $('#juso').click(function(){
-
+        var width = 500; //팝업의 너비
+        var height = 600
         new daum.Postcode({
+            width: width, //생성자에 크기 값을 명시적으로 지정해야 합니다.
+            height: height,
             oncomplete: function(data) {
                 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
@@ -69,7 +72,10 @@ $(document).ready(function(){
                 // 예제를 참고하여 다양한 활용법을 확인해 보세요.
                 // http://postcode.map.daum.net/guide  api주소 
             }
-        }).open();
+        }).open({
+            left: (window.screen.width / 2) - (width / 2),
+            top: (window.screen.height / 2) - (height / 2)
+        });
 
 
 

@@ -12,7 +12,6 @@
   <script src="../main/js/common.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="./js/admin_common.js"></script>
-  <script src="./js/admin_prd_upload.js"></script>
   <script>
         function chkword_name(obj, maxByte){                      // 상품명 글자수 제한 두기
             var strValue = obj.value;         //strValue : 글자수 값을 저장하기 위한 변수
@@ -135,14 +134,24 @@
 
       
   </script>
+
+
+  <script>
+      function img_remove(obj){
+        var obj_name = $(obj).attr('name');
+        console.log(obj_name);
+          
+        a = $('#'+obj_name)
+        $('#'+obj_name).empty();
+       
+
+      }
+  </script>
   
 </head>
 <body>
 
   <div id="container">
-    
-
-
 
     <div id="main">
       <div id="content">
@@ -392,11 +401,148 @@
                                 </td>
                             </tr>
                             
+
+
+
+                            <tr class="product_detail">
+                                <th>상품설명</th>
+
+                                
+                                <td>
+                                    <div class="product_main">
+                                        <span class="product_tit">상품 메인 이미지</span>
+                                    </div>
+
+
+                                    <div>                                
+                                        <div class="image_box">
+
+                                        
+                                            <div class="image_add">
+                                                
+                                                
+                                                <input type="file" name="product_main_image" accept="image/*" id="image_input" onchange="set_main_image(event);">
+                                                <button type="button" class="image_input_button"></button>
+                                                <div id="image_main_container"></div>
+
+                                                <!--  이미지 업로드하면 미리보기 썸네일 나오기-->
+                                                <script>  
+                                                    function set_main_image(){
+                                                        
+                                                        var reader = new FileReader();
+
+                                                        reader.onload = function(event) {
+                                                            var img = document.createElement("img");
+                                                            img.setAttribute("src", event.target.result);
+                                                            document.querySelector("div#image_main_container").appendChild(img);
+                                                        };
+
+                                                        reader.readAsDataURL(event.target.files[0]);
+                                                    }
+
+                                                </script>
+
+                                                
+                                                <div style="margin-bottom:20px;">
+                                                
+                                                    <button type="button" name="image_main_container" class="remove" onclick="img_remove(this)">
+                                                        <span>
+                                                            삭제
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-top: 70px;">
+                                        <div class="product_main">
+                                            <span class="product_tit">상품 설명</span>
+                                        </div>
+                                        <span>
+                                            
+                                            <textarea class="i_text main_description" name="main_description"  id="" cols="30" rows="10"></textarea>
+                                        </span>
+                                    </div>
+
+
+                                    <div class="product_main" style="margin-top:30px;">
+                                        <span class="product_tit">상품 상세 이미지</span>
+                                    </div>
+
+
+                                    <div>                                
+                                        <div class="image_box">
+
+                                        
+                                            <div class="image_add">
+                                                
+                                                
+                                                <input type="file" name="product_detail_image" accept="image/*" id="image_input" onchange="set_detail_image(event);">
+                                                <button type="button" class="image_input_button"></button>
+                                                <div id="image_detail_container"></div>
+
+                                                <!--  이미지 업로드하면 미리보기 썸네일 나오기-->
+                                                <script>  
+                                                    function set_detail_image(){
+                                                        
+                                                        var reader = new FileReader();
+
+                                                        reader.onload = function(event) {
+                                                            var img = document.createElement("img");
+                                                            img.setAttribute("src", event.target.result);
+                                                            document.querySelector("div#image_detail_container").appendChild(img);
+                                                        };
+
+                                                        reader.readAsDataURL(event.target.files[0]);
+                                                    }
+
+                                                </script>
+
+                                                
+                                                <div style="margin-bottom:20px;">
+
+                                                    <button type="button" name="image_detail_container" class="remove" onclick="img_remove(this)">
+                                                        <span>
+                                                            삭제
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-top: 70px;">
+                                        <div class="product_main">
+                                            <span class="product_tit">상품 상세 설명</span>
+                                        </div>
+                                        <span>
+                                            
+                                            <textarea class="i_text main_description" name="detail_description"  id="" cols="30" rows="10" onkeyup="chkword_information(this, 550)"></textarea>
+                                        </span>
+                                    </div>
+
+
+
+                                    
+                                    
+
+                                
+                                </td>
+                            </tr>
+
+
+
+
                             <tr>
-                                <th>이미지</th>
+                                <th>기타 이미지</th>
                                 <td class="img_upload">
                                     <div>
-                                        <span>대표 이미지</span>
+                                        <span>상품 썸네일</span>
                                     
                                         <div class="image_box">
 
@@ -425,14 +571,7 @@
 
                                                 </script>
 
-                                                
-                                                
-                                                <button type="button" class="re_upload">
-                                                    <span>
-                                                        수정
-                                                    </span>
-                                                </button>
-                                                <button type="button" class="remove">
+                                                <button type="button" name="image_container" class="remove" onclick="img_remove(this)">
                                                     <span>
                                                         삭제
                                                     </span>
@@ -441,80 +580,12 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-                                    <div>
-                                        <div class="image_save">
-                                            <span>서브 이미지</span>
-                                            <ul>
-                                                <li>
-                                                    <div class="sub_image">
-                                                        <input type="file" name="product_sub_image" accept="image/*" id="sub_image_input" onchange="set_sub_image(event);">
-                                                        <button type="button" class="sub_image_input_button"></button>
-                                                        <div id="sub_image_container"></div>
-
-                                                        <!--  이미지 업로드하면 미리보기 썸네일 나오기-->
-                                                        <script>  
-                                                            function set_sub_image(){
-                                                                
-                                                                var reader = new FileReader();
-
-                                                                reader.onload = function(event) {
-                                                                    var img = document.createElement("img");
-                                                                    img.setAttribute("src", event.target.result);
-                                                                    document.querySelector("div#sub_image_container").appendChild(img);
-                                                                };
-
-                                                                reader.readAsDataURL(event.target.files[0]);
-                                                            }
-
-                                                        </script>
-                                                    </div>
-                                                </li>  
-                                                
-                                            </ul>
-                                            <div class="sub_button">
-                                                
-                                                <button type="button" class="sub_re_upload">
-                                                    <span>
-                                                        수정
-                                                    </span>
-                                                </button>
-                                                <button type="button" class="sub_remove">
-                                                    <span>
-                                                        삭제
-                                                    </span>
-                                                </button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                    
-                                    
-
-                                            
-                                            
-                                        
-                                        
-                                        
-                                    
                                     
                                 </td>
 
 
 
                                 
-                            </tr>
-                            <tr>
-                                <th>상품설명</th>
-                                <td>
-                                    <div>
-                                        <span>
-                                            <input type="text" name="product_description" class="i_text text8">
-                                        </span>
-                                    </div>
-                                </td>
                             </tr>
                         </tbody>
                     </table>
