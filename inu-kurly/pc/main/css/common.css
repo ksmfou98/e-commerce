@@ -3,10 +3,24 @@
 @charset "utf-8";
 
 
+/* 이도현이 추가한거 */
+
 textarea::placeholder, input::placeholder{
     color:rgb(173, 173, 173);
 }
 
+#header, #container, #content {
+    position: relative;
+}
+
+#main {
+    border-bottom: 1px solid #f7f7f7;
+}
+
+#content {
+    min-width: 1050px;
+    padding-bottom: 120px;
+}
 
 
 
@@ -34,9 +48,7 @@ textarea::placeholder, input::placeholder{
     /* 1px로 했는데 2px로 나와서 수정 필요 */
 }
 
-#top_event.login .inner_top_event.login {
-    
-}
+
 
 #top_event.login .inner_top_event .top_event_bnr.login {
     color: #4c4c4c;

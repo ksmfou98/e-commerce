@@ -964,3 +964,49 @@ body .btn_type2 .txt_type {
     font-weight: 700;
     letter-spacing: .5px;
 }
+
+#cartPut .cart_type1 {
+    display: block;
+    position: fixed;
+    z-index: 200;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 68px;
+    background-color: #fcfcfc;
+}
+
+#cartPut .cart_type1 .group_btn.off {
+    border-top: 1px solid #ddd;
+}
+
+#cartPut .cart_type1 .group_btn {
+    overflow: hidden;
+    padding: 10px;
+    background-color: #fcfcfc;
+}
+
+#cartPut .cart_type1 .group_btn .btn_type1 {
+    width: auto;
+}
+
+.btn_type1 {
+    border: 1px solid #5f0081;
+    background-color: #5f0080;
+}
+
+#cartPut .cart_type1 .group_btn .txt_type {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: 0 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.btn_type1 .txt_type {
+    color: #fff;
+}
