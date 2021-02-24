@@ -135,14 +135,6 @@ body .tit_section {
     white-space: nowrap;
 }
 
-.tit_section {
-    padding: 74px 0 16px;
-    font-weight: bold;
-    font-size: 20px;
-    color: #333;
-    line-height: 29px;
-    clear: both;
-}
 
 
 .data_orderer {
@@ -213,4 +205,349 @@ body .tit_section {
     font-size: 12px;
     line-height: 21px;
     color: #666;
+}
+
+.tit_section .desc {
+    padding-left: 13px;
+    font-size: 14px;
+    color: #666;
+    vertical-align: 3px;
+}
+
+.order_address {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.order_section {
+    overflow: hidden;
+    letter-spacing: -0.3px;
+}
+
+.order_section .section_crux {
+    float: left;
+    width: 190px;
+    padding-top: 19px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+}
+
+.order_section .section_full {
+    overflow: hidden;
+    padding: 19px 20px 20px 0;
+}
+
+.order_address .addr {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    line-height: 24px;
+}
+
+.order_section .badge.star {
+    color: #5f0080;
+}
+
+.order_section .badge {
+    display: block;
+    padding-top: 4px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.order_reception {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.order_reception .receiving {
+    font-size: 14px;
+    color: #333;
+    line-height: 24px;
+}
+
+.order_reception .way {
+    padding-top: 9px;
+}
+
+.order_reception .way .place {
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+}
+
+.order_reception .way .txt {
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+}
+
+.order_reception .way .txt:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin: 0 6px 0 9px;
+    background-color: #ddd;
+    vertical-align: -3px;
+}
+
+.order_section .btn.default {
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.order_reception .btn {
+    display: block;
+    width: 60px;
+    margin-top: 20px;
+}
+
+.order_section .btn {
+    overflow: hidden;
+    height: 30px;
+    padding-bottom: 3px;
+    border: 1px solid #5f0080;
+    border-radius: 3px;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    color: #5f0080;
+    line-height: 18px;
+    text-align: center;
+}
+
+.tax_absolute {
+    position: relative;
+    float: right;
+    width: 284px;
+    height: 0;
+}
+
+.tax_absolute .inner_sticky {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+
+
+body #orderitem_money_info .fst {
+    padding-top: 0;
+    padding-bottom: 4px;
+}
+
+
+#orderitem_money_info .amount {
+    overflow: hidden;
+    padding-top: 12px;
+    letter-spacing: -0.5px;
+}
+
+#orderitem_money_info .tit {
+    float: left;
+    width: 96px;
+}
+
+#orderitem_money_info .tit, #orderitem_money_info .lst .price .won, #orderitem_money_info .price {
+    font: normal 16px/24px 'Noto Sans';
+    vertical-align: top;
+}
+
+#orderitem_money_info {
+    width: 100%;
+    padding: 17px 16px 18px 18px;
+    background: #fafafa;
+    border: 2px solid #f2f2f2;
+}
+
+#orderitem_money_info .price {
+    float: right;
+    width: 144px;
+    text-align: right;
+}
+
+#orderitem_money_info .sub {
+    padding-top: 8px;
+}
+
+#orderitem_money_info .sub .tit {
+    padding-left: 16px;
+    background: url(https://res.kurly.com/pc/service/order/2011/ico_sub_price_dot.svg) no-repeat 0 0;
+    background-size: 16px 20px;
+}
+
+#orderitem_money_info .sub .tit, #orderitem_money_info .price .normal, #orderitem_money_info .sub .price {
+    font-weight: normal;
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+}
+
+#orderitem_money_info .lst {
+    margin: 17px 0 0 0;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+#paper_settlement, .section_orderview .tbl_type2 td .emph {
+    font-weight: 700;
+}
+
+#orderitem_money_info .lst .price {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.data_payment {
+    float: left;
+}
+
+.tbl_left {
+    float: left;
+    width: 742px;
+}
+
+
+
+.user_form .goodsinfo_table {
+    border-bottom: 0 none;
+}
+
+.goodsinfo_table {
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.data_payment .emoney_use {
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+body .data_payment th {
+    padding-top: 29px;
+}
+
+.goodsinfo_table th {
+    width: 190px;
+    padding: 8px 0 0;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.goodsinfo_table tr:last-child td {
+    border: none;
+}
+
+.data_payment td {
+    padding: 20px 0;
+}
+
+.goodsinfo_table td {
+    position: relative;
+    font-size: 14px;
+    color: #333;
+    line-height: 24px;
+    vertical-align: top;
+}
+
+.data_payment .emoney_use .emoney_reg {
+    overflow: hidden;
+}
+
+.data_payment .emoney_use input[name="using_point"] {
+    float: left;
+    width: 160px;
+    margin-right: 8px;
+}
+
+.user_form input[type="text"] {
+    width: 332px;
+    height: 44px;
+    padding: 12px 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    letter-spacing: -0.5px;
+    outline: none;
+}
+
+
+.data_payment .emoney_use .emoney_chkbox {
+    float: left;
+    width: 120px;
+    height: 33px;
+    padding: 10px 0 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+
+.data_payment .emoney_use input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.data_payment .emoney_use .possess {
+    padding-top: 10px;
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+}
+
+.data_payment .emoney_use .possess .emph {
+    font-weight: bold;
+    color: #333;
+}
+
+.data_payment .emoney_use .list_notice {
+    padding-top: 16px;
+}
+
+.data_payment .emoney_use .list_notice li {
+    padding-top: 4px;
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    letter-spacing: -0.2px;
+}
+
+.data_payment .emoney_use {
+    border-top: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.data_method .goodsinfo_table th, .data_method .goodsinfo_table td {
+    padding-top: 23px;
+}
+
+.user_form .btn_payment {
+    display: block;
+    width: 240px;
+    height: 56px;
+    margin: 40px auto 0;
+    border: 0 none;
+    border-radius: 3px;
+    background-color: #5f0080;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
 }
