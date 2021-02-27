@@ -208,7 +208,7 @@ window.addEventListener('DOMContentLoaded',function(){
 
             var change_bg = $('.inner_lnb ul li:eq(' + cate_index + ') a').innerWidth();  //change_bg라는 변수에다가 방금 클릭한 a태그의 가로길이 값을 저장(막대 바 크기 조절을 위해)
             
-            
+            console.log($('.inner_lnb ul li:eq(' + cate_index + ') a').text());
             
 
             var pos = $('.inner_lnb ul li:eq(' + cate_index + ') a').position()  // 변수 pos에다가 현재 클릭한 a 태그의 위치값 저장
@@ -223,12 +223,12 @@ window.addEventListener('DOMContentLoaded',function(){
 
 
 
-            $('.bg').stop().animate({    //bg막대 이동 animate실행
-                "left": pos.left + "px",  //left값은 위에서 구한 pos의 left값 만큼 이동
-                "bottom" : pos.bottom + "px" // bottom은 pos의 bottom값 만큼 이동
-            }, 150, function(){  // 150의 속도만큼
-                $('.bg').css('width', change_bg+'px');  // 막대길이는 위에서구한 change_bg만큼 변화
-            });
+            // $('.bg').stop().animate({    //bg막대 이동 animate실행
+            //     "left": pos.left + "px",  //left값은 위에서 구한 pos의 left값 만큼 이동
+            //     "bottom" : pos.bottom + "px" // bottom은 pos의 bottom값 만큼 이동
+            // }, 150, function(){  // 150의 속도만큼
+            //     $('.bg').css('width', change_bg+'px');  // 막대길이는 위에서구한 change_bg만큼 변화
+            // });
 
 
         });
