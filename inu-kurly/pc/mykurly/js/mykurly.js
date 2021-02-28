@@ -194,3 +194,65 @@ $(document).ready(function(){
 
 
 });
+
+
+
+var count = 0;
+
+function image_upload(){
+    
+    
+    var inner_photo = document.querySelector(".inner_photo");
+    var btn_upload = document.querySelector(".btn_upload");
+    var reader = new FileReader();
+    reader.onload = function(event) {
+       
+        count++;
+        if (count > 5){
+            alert("사진은 최대 5장만 업로드 가능합니다");
+        }
+        else{
+            var div = document.createElement("div");
+            var span = document.createElement("span");
+            var del_btn = document.createElement("button");
+            del_btn.type="button";
+            div.classList.add("item_photo");
+            del_btn.classList.add("btn_delete");
+            span.classList.add("photo");
+            span.style.backgroundImage = "url('"+ event.target.result + "')";
+            del_btn.addEventListener("click", deleteImage);
+        
+            div.appendChild(span);
+            div.appendChild(del_btn);
+            inner_photo.appendChild(div);
+            $(".file_count .num").text(count);
+        }
+        
+
+
+        
+        
+        
+
+
+
+    };
+
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+
+
+
+
+
+
+function deleteImage(event){
+    var inner_photo = document.querySelector(".inner_photo");
+    const btn = event.target;
+    const div = btn.parentNode;
+    inner_photo.removeChild(div);
+    count--
+    $(".file_count .num").text(count);
+    
+}

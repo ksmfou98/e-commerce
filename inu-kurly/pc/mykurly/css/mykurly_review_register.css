@@ -97,7 +97,7 @@ textarea::placeholder, input::placeholder{
 }
 
 .section_write .write_board .item_photo {
-    display: none;
+    display: block;
     position: relative;
     float: left;
     padding: 10px 20px 10px 0;

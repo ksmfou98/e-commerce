@@ -204,29 +204,28 @@
                                             <td>
                                                 <div class="photo_add">
                                                     <div class="inner_photo">
-                                                        <div class="item_photo">
-                                                            <span class="photo" style="background-image:url('https://res.kurly.com/mobile/img/1808/img_none_x2.png')"></span>
-                                                            <button type="button" class="btn_delete">
-                                                                <span class="blind">
-                                                                    등록된 사진 삭제
-                                                                </span>
-                                                            </button>
-                                                        </div>
+                                                        
                                                     </div>
 
                                                    <span class="btn_upload">
-                                                        <input type="file" name="file[]" class="file_upload"  value="사진등록하기" accept="image/*">
+                                                        <input type="file" name="file[0]" class="file_upload"  value="사진등록하기" onchange="image_upload(event);" accept="image/*">
+                                                        
+                                                        
                                                    </span> 
                                                 </div>
 
                                                 <div class="file_count">
                                                     <p class="txt_count">
-                                                        <span class="num">0</span>장 / 최대 8장
+                                                        <span class="num">0</span>장 / 최대 5장
                                                     </p>
                                                 </div>
 
                                                 <p class="photo_notice">구매한 상품이 아니거나 캡쳐 사진을 첨부할 경우, 통보없이 삭제 및 적립 혜택이 취소됩니다.</p>
                                             </td>
+                                           
+                                            
+
+
                                         </tr>
                                     </tbody>
                                 </table>
