@@ -428,3 +428,20 @@ input::placeholder{
 .address_scroll {   /*팝업창 스크롤 크기 100%로 꽉차게 지정해줘야됨 .. 이거안해서 하루종일 화났음;;*/
     height: 100%;
 }
+
+
+.user_reg .txt_guide .txt.bad:before {
+    content: "\2715";
+    display: inline-block;
+    padding-right: 3px;
+    font-size: 12px;
+    vertical-align: 0;
+}
+
+.user_reg .txt_guide .txt.good:before {
+    content: "\2713";
+    display: inline-block;
+    padding: 0 4px 0 2px;
+    font-size: 12px;
+    vertical-align: 0;
+}

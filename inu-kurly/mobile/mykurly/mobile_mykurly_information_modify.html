@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../accounts/css/mobile_join.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="../main/js/mobile_common.js"></script>
+    <script src="./js/mobile_mykurly.js"></script>
 </head>
 <body>
 
@@ -80,11 +81,7 @@
                                현재 비밀번호
                             </div>
                             <div class="desc">
-                                <input type="password" name="pw" size="13" maxlength="16" required="" placeholder="비밀번호를 입력해주세요" label="비밀번호" onkeyup="pw_check()">
-                                <p class="txt_guide">
-                                    <span class="txt txt_case1">10자 이상 입력</span>
-                                    <span class="txt txt_case2">영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합</span>
-                                </p>
+                                <input type="password" name="now_pw" size="13" maxlength="16" required="" placeholder="비밀번호를 입력해주세요" label="비밀번호">
                             </div>
                         </div>
 
@@ -94,10 +91,11 @@
 
                             </div>
                             <div class="desc">
-                                <input type="password" name="pw" size="13" maxlength="16" required="" placeholder="새 비밀번호를 입력해주세요" label="비밀번호" onkeyup="pw_check()">
+                                <input type="password" name="new_pw" size="13" maxlength="16" required=""  placeholder="새 비밀번호를 입력해주세요"  label="비밀번호" onkeyup="pw_check(this)">
                                 <p class="txt_guide">
                                     <span class="txt txt_case1">10자 이상 입력</span>
                                     <span class="txt txt_case2">영문/숫자/특수문자(공백 제외)만 허용하며, 2개 이상 조합</span>
+                                    <span class="txt txt_case3">현재 비밀번호와 다르게 입력</span>
                                 </p>
                             </div>
                         </div>
@@ -160,10 +158,6 @@
                                 <input type="number" pattern="[0-9]*" name="day" value="18" size="2" maxlength="2" >
                             
                             </div>
-                            
-                            <p class="txt_guide">
-                                <span class="txt"></span>
-                            </p>
                         </div>
 
                         <div class="fixed_parent">
@@ -180,7 +174,7 @@
             </section>
 
             <div class="link_hack">
-                <a href="#" class="link_more">탈퇴하기</a>
+                <a href="http://127.0.0.1:5500/mobile/mykurly/mobile_mykurly_withdrawal.html" class="link_more">탈퇴하기</a>
             </div>
         </div>
 
