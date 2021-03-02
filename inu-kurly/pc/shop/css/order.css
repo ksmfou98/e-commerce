@@ -553,14 +553,7 @@ body .data_payment th {
 }
 
 
-#kakaopay {
-    border: 1px solid #FEE500;
-    padding: 2px 9px;
-    border-radius: 8px;
-    margin-left: 5px;
-    background-color: #FEE500;
-    font-weight: 700;
-}
+
 
 .order_complete .head_aticle .tit{
     text-align: center;

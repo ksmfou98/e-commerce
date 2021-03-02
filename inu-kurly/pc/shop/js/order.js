@@ -27,6 +27,8 @@ $(document).ready(function(){
         if (input_emoney < 1000){
             alert("적립금은 1천원 이상부터 사용 가능합니다");
             $('#emoney').val("");
+            $(".emoney.point").val(0);
+            $("#paper_reserves").text("0 원");
         }
         
         else if (input_emoney > emoney){
@@ -34,11 +36,14 @@ $(document).ready(function(){
             $("#emoney").val(0);
         }      
         else{
-            $("#emoney").val(comma(input_emoney));
+            console.log(input_emoney);
+            $("#emoney").val(input_emoney);
             $("#paper_reserves").text(" - " + comma(input_emoney)+ " 원");
             $(".emoney_point").val(input_emoney);
             product_price();
         }
+
+
         
     });
 
@@ -46,7 +51,7 @@ $(document).ready(function(){
         var product_cost = Number($(".info_price .cost").val());  //주문가격
         $("#productsTotalPrice").text(comma(product_cost));
         var delivery_cost = 0;
-        if (product_cost >= 50000){
+        if (product_cost >= 40000){
             $("#paper_delivery").text("0");
             delivery_cost = 0;
         }
