@@ -551,3 +551,26 @@ body .data_payment th {
     font-size: 16px;
     color: #fff;
 }
+
+
+#kakaopay {
+    border: 1px solid #FEE500;
+    padding: 2px 9px;
+    border-radius: 8px;
+    margin-left: 5px;
+    background-color: #FEE500;
+    font-weight: 700;
+}
+
+.order_complete .head_aticle .tit{
+    text-align: center;
+    font-size: 30px;
+}
+
+.order_complete .page_aticle{
+    width:850px;
+}
+
+.order_complete .page_aticle .head_aticle {
+    padding: 10px 0 100px;
+}

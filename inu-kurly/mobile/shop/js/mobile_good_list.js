@@ -197,8 +197,58 @@ $(document).ready(function(){
 
    
 
+    
+    $(".goods-view-tab-item").click(function(){
+        _index = $(".goods-view-tab-item").index(this);
+        
+        if($('.goods-view-tab-item a').hasClass("__active") === true){      // 여기서 on은 글자색 보라색으로 해주는 css클래스요소
+            $('.goods-view-tab-item a').removeClass('__active');            // 기존에 있던 on은 비활성화 시키고 , 이번에 클릭한 요소에다가 on을 활성화 시키기 위함임
+        }
+        
+        $('.goods-view-tab-group li:eq(' + _index + ') a').addClass('__active'); 
+
+        if($('.goods-menu .goods-view-tab-content').hasClass("__active") === true){      // 여기서 on은 글자색 보라색으로 해주는 css클래스요소
+            $('.goods-menu .goods-view-tab-content').removeClass('__active');            // 기존에 있던 on은 비활성화 시키고 , 이번에 클릭한 요소에다가 on을 활성화 시키기 위함임
+        }
+
+        $('.goods-view-tab-content:eq(' + _index + ')').addClass('__active');
+        
+
+    })
 
 
 
+    $("#goodsReview .list li").click(function(){
+        _index = $("#goodsReview .list li").index(this);
+        
+        $('#goodsReview .list li:eq('+ _index +') .review').toggle();
+        $('#goodsReview .list li:eq('+ _index +') .review_list').toggleClass("open");
+
+
+    })
+
+
+
+
+});
+
+// goods_view nav바 상단 고정
+document.addEventListener('DOMContentLoaded', function() {
+    const gnb = document.querySelector('#content-tab');
+    const gnbTopOffset = gnb.offsetTop;
+    window.addEventListener('scroll', e =>{
+        
+        if (window.pageYOffset >= gnbTopOffset) {
+            gnb.style.position = 'fixed';
+            gnb.style.top = 0;
+            gnb.style.left = 0;
+            gnb.style.right = 0;
+            $("#header").css("position", "relative");
+        } else {
+            gnb.style.position = '';
+            gnb.style.top = '';
+            $("#header").css("position", "fixed");
+        }
+    });
 
 });

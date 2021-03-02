@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/order.css">
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="../main/js/common.js"></script>
+    <script src="./js/order.js"></script>
 
 </head>
 <body>
@@ -41,12 +42,14 @@
                                     <div class="info_price">
                                         <span class="num">
                                             <span class="price">
-                                                1,105
+                                                1,300
                                                 원
                                             </span>
-                                            <span class="cost">
+                                            <input class="cost" type="hidden" value="1300"> <!-- value 에 가격 값 넣기-->
+
+                                            <!-- <span class="cost"> 할인금액 하는건데 이건 뺴야겠음
                                                 1,300원
-                                            </span>
+                                            </span> -->
                                         </span>
                                     </div>
                                 </li>
@@ -104,37 +107,14 @@
                                         <span class="addr" id="addrInfo">인천 대학교</span>
                                         <span class="tag" id="addrTags">
                                             <span class="badge star" id="addrBadge">샛별배송</span>
+                                            <span style="display:block; margin-top:5px;">배송지 수정은 마이컬리  > 배송지 관리에서 변경할 수 있어요</span>
                                         </span>
 
                                     </span>
                                 </div>
                             </div>
 
-                            <div class="order_section order_reception" id="divReception" >
-                                <h3 class="section_crux">
-                                상세 정보
-                                </h3>
-                                <div class="section_full">
-                                
-                                    <div class="receiving" id="receiverInfo">
-                                        이도현, 010-1111-1111
-                                    </div>
-                                    <div class="way" id="wayPlace">
-                                        <span class="place" id="areaInfo">문 앞</span>
-                                        
-                                        <span class="txt" id="meanType">공동현관 비밀번호</span>
-                                        
-                                        
-                                        
-                                        <div class="message" id="deliveryMessage">
-                                            <span class="place" id="deliveryMessageTitle">배송완료 메시지</span>
-                                            <span class="txt" id="deliveryMessageDetail">배송 직후</span>
-                                        </div>
-                                    </div>
-                                    <button type="button" id="btnUpdateSubAddress"class="btn default">수정</button>
-                                
-                                </div>
-                            </div>
+                            
 
                             <div class="tax_absolute">
                                 <div class="inner_sticky" id="sticky" style="top:0px;">
@@ -143,27 +123,12 @@
                                         <dl class="amount fst">
                                             <dt class="tit">주문금액</dt>
                                             <dd class="price">
-                                                <span id="productsTotalPrice">2,000</span> 
+                                                <span id="productsTotalPrice"></span> 
                                                 원
                                             </dd>
                                         </dl>
 
-                                        <dl class="amount sub">
-                                            <dt class="tit">상품금액</dt>
-                                            <dd class="price">
-                                                <span id="paper_goodsprice">2,000</span> 
-                                                원
-                                            </dd>
-                                        </dl>
 
-                                        <dl class="amount sub">
-                                            <dt class="tit">상품할인금액</dt>
-                                            <dd class="price sales_area">
-                                                <span class="pm_sign normal" style="display: none;">-</span>
-                                                <span id="special_discount_amount" class="normal">0</span>
-                                                원
-                                            </dd>
-                                        </dl>
 
                                         <dl class="amount">
                                             <dt class="tit">배송비</dt>
@@ -171,7 +136,6 @@
                                                 <div id="paper_delivery_msg1" style="display: block;">
                                                     <span class="pm_sign" style="display: inline;">+</span>
                                                     <span id="paper_delivery" class="">3,000</span>
-                                                    <span id="paper_delivery2" style="display:none">0</span>
                                                     원
                                                 </div>
                                             </dd>
@@ -181,6 +145,7 @@
                                             <dt class="tit">적립금사용</dt>
                                             <dd class="price">
                                                 <span class="num pay_sum" id="paper_reserves">0 원</span>
+                                                <input type="hidden" class="emoney_point" value="">
                                             </dd>
                                         </dl>
 
@@ -188,6 +153,7 @@
                                             <dt class="tit">최종결제금액</dt>
                                             <dd class="price">
                                                 <span id="paper_settlement">5,000</span>
+                                                <input type="hidden" id="product_price_value" name="product_price_value" value="">
                                                 <span class="won">원</span>
                                             </dd>
                                         </dl>
@@ -211,17 +177,16 @@
                                                 <td>
                                                     <div id="ondealCheck">
                                                         <div class="emoney_reg">
-                                                            <input type="text" name="using_point" id="emoney" class="number_only" value="" placeholder="0" pattern="[0-9]*" inputmode="decimal">
+                                                            <input type="text" name="using_point" id="emoney"  class="number_only" value="" placeholder="0" pattern="[0-9]*" inputmode="decimal">
                                                             <div class="check">
                                                                 <label class="emoney_chkbox">
-                                                                    <input type="checkbox" >
                                                                     <span class="txt_checkbox">모두사용</span>
                                                                 </label>
                                                             </div>
                                                         </div>
 
                                                         <p class="possess">
-                                                            보유 적립금 : <strong class="emph">1,174</strong>원
+                                                            보유 적립금 : <strong class="emph">1900</strong>원
 
                                                         </p>
 
@@ -246,10 +211,10 @@
                                         <tr>
                                             <th> 카카오페이 결제</th>
                                             <td>
-                                                <label class="label_radio" id="cardBenefitToss">
-                                                    <input type="radio" name="settlekind" value="toss">
-                                                    <img src="../img/카카오페이.png" height="18" alt="토스 결제">
-                                                    <img class="img_benefit" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP4zwAAAgEBAKEeXHUAAAAASUVORK5CYII=" height="20">
+                                                <label class="label_radio" id="cardBenefit_kakaopay">
+                                                    <input type="radio" name="settlekind" value="kakaopay">
+                                                    <span id="kakaopay">카카오페이</span>
+                                                    
                                                     <div class="info_benefit"></div>
                                                 </label>
                                             </td>
