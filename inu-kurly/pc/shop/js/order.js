@@ -14,7 +14,7 @@ $(document).ready(function(){
             alert("적립금은 1천원 이상부터 사용 가능합니다")
         }
         else{
-            $(".emoney_reg input").val(comma(emoney));
+            $(".emoney_reg input").val(emoney);
             $("#paper_reserves").text(" - " + comma(emoney)+ " 원");
             $(".emoney_point").val(emoney);
             product_price();
