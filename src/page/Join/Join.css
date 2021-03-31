@@ -13,22 +13,9 @@
   letter-spacing: -0.5px;
 }
 
-.member_join .field_head .sub {
-  padding: 23px 0 10px;
-  font-size: 12px;
-  color: #666;
-  line-height: 17px;
-  text-align: right;
-}
-
-.member_join .field_head .sub .ico {
-  padding-right: 2px;
-  color: #ee6a7b;
-}
-
 .member_join .tbl_comm {
   width: 100%;
-  border-top: 2px solid #333;
+
 }
 
 table {
@@ -49,10 +36,6 @@ table {
   line-height: 20px;
   vertical-align: top;
   text-align: left;
-}
-
-.member_join th .ico {
-  color: #ee6a7b;
 }
 
 .member_join .tbl_comm .fst td {
@@ -88,9 +71,9 @@ table {
 }
 
 .type_form .btn.default {
-  border: 1px solid #5f0080;
+  border: 1px solid #000;
   background-color: #fff;
-  color: #5f0080;
+  color: #000;
 }
 
 #main .member_join .btn {
@@ -149,7 +132,7 @@ table {
   overflow: hidden;
   width: 332px;
   height: 44px;
-  border: 1px solid #5f0080;
+  border: 1px solid #000;
   border-radius: 3px;
   text-align: center;
 }
@@ -161,12 +144,9 @@ table {
   padding-left: 24px;
   font-weight: 700;
   font-size: 14px;
-  color: #5f0080;
+  color: #000;
   line-height: 40px;
-  background: url(https://res.kurly.com/pc/service/common/2006/ico_search.svg)
-    no-repeat 0 50%;
-  background-size: 25px 24px;
-  vertical-align: top;
+
 }
 
 .member_join .birth .birth_day {
@@ -201,8 +181,9 @@ table {
 }
 
 .member_join .form_footer {
-  padding-top: 40px;
   text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
 }
 
 #main .member_join .form_footer .btn_join {
@@ -213,8 +194,8 @@ table {
 }
 
 .type_form .btn.active {
-  border: 1px solid #5f0081;
-  background-color: #5f0080;
+  border: 1px solid #000;
+  background-color: #000;
   color: #fff;
 }
 
@@ -227,6 +208,41 @@ input::placeholder {
   margin-top: 10px;
 }
 
-.form_footer {
-  border-top: 2px solid #333;
+.good {
+  color: #0f851a;
+}
+
+.bad {
+  color: #b3130b;
+}
+
+.type_form .txt_guide .txt.bad:before {
+    content: '\2715';
+    display: inline-block;
+    padding-right: 3px;
+    font-size: 12px;
+    vertical-align: 0;
+}
+
+.type_form .txt_guide .txt.good:before {
+    content: '\2713';
+    display: inline-block;
+    padding: 0 4px 0 2px;
+    font-size: 12px;
+    vertical-align: 0;
+}
+
+.link_login{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.link_login span{
+  font-size:14px;
+}
+
+.link_login span a{
+  color:#000;
+  font-size:15px;
+  font-weight: 700;
 }
